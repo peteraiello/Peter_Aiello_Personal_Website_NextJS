@@ -74,7 +74,7 @@ export const Overview = ({
     return (
         <SectionWrapper id={id}>
             <div className="grid gap-y-5 grid-cols-12">
-                <div className="col-span-12 md:col-span-6 lg:col-span-8">
+                <div className="col-span-12 md:col-span-6">
                     <div className="flex flex-col gap-5">
                         {name &&
                             <div className="flex items-center gap-[10px]">
@@ -119,7 +119,7 @@ export const Overview = ({
                         }
                     </div>                 
                 </div>
-                <div className="col-span-12 md:col-span-6 lg:col-span-4">
+                <div className="col-span-12 md:col-start-8 md:col-span-5">
                     <div className="flex flex-col justify-center md:justify-end w-full">
                         <div className="rounded-full overflow-hidden w-[300px] h-[300px] relative">
                             {profileImage &&
