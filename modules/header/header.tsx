@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect }  from "react";
 import Link from "next/link";
 import {HeaderIcon} from './logo';
 import { AIcon } from "./a-logo";
+import { LogoNew } from "./logo-new";
 import { ThemeToggleButton } from "../../components/button/theme-toggle";
 
 interface MenuItem {
@@ -55,16 +56,7 @@ export const Header = ({items}:HeaderProps) => {
                     <div className="py-5 flex gap-10 items-center justify-between md:justify-normal">
                         <Link href={'/'} className={`focus:rounded-full transition-all duration-300 ${headerScrolled ? 'w-[50px] h-[50px]' : 'w-[88px] h-[88px]' }`}>
                             <span className="opacity-0 absolute font-0 ">Return to homepage</span>
-                            <svg width="100%" height="100%" viewBox="0 0 380 380">
-                                <g id="group_1" data-name="Group 1" transform="translate(0 -1)">
-                                <g className="stroke-black dark:stroke-white" id="ellipse_1" data-name="ellipse" transform="translate(0 1)" fill="none" strokeWidth="10" >
-                                    <circle cx="190" cy="190" r="190" stroke="none" />
-                                    <circle cx="190" cy="190" r="185" fill="none" />
-                                </g>
-                                <path id="gator-sign" className={`gator-animated fill-black dark:fill-white`} data-name="gator-sign"
-                                    d="M173.623,180.489,0,104.246V86.541L173.623,0V26.92L32.34,93.948l141.284,59.26Z"  />
-                                </g>
-                            </svg>
+                            <LogoNew /> 
                         </Link>
                         <div className="flex items-center">
                             {
@@ -72,7 +64,7 @@ export const Header = ({items}:HeaderProps) => {
                                 <ul className="hidden md:flex mr-10 gap-10 font-open font-medium">
                                     {items?.map((item, index) => {
                                         return (
-                                            <li key={index} className="lowercase"><Link href={item?.href}>{item?.label}</Link></li>
+                                            <li key={index}><Link href={item?.href}>{item?.label}</Link></li>
                                         )
                                     })}
                                 </ul>

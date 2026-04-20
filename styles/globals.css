@@ -14,10 +14,14 @@
 
     :root {
         --color-darker-gray: 18 18 18;
-        --color-dark-gray: 33 34 36;
+        --color-dark-gray: 29 30 32;
         --color-light-gray: 224 224 224;
-        --color-brand-blue: 0 124 186;
+        --color-brand-blue: 108 144 255; 
+        --color-brand-blue-lighter: 178 196 252;
+        --color-brand-red-lighter: 253 143 140;
+        --color-brand-red: 255 91 86;
         --color-brand-gold: 223 189 133;
+        --color-white: 248 248 248;
     }
 
     div.patterns {
@@ -56,6 +60,26 @@
         }
     }
 
+    .icon-animation {
+        @apply transition-all duration-300 ease-in-out;
+    }
+
+    .icon-animation-d-1 {
+        @apply transition-all ease-in-out duration-100;
+    }
+
+    .icon-animation-d-2 {
+        @apply transition-all ease-in-out duration-200;
+    }
+
+    .icon-animation-d-3 {
+        @apply transition-all ease-in-out duration-300;
+    }
+
+    .icon-animation-d-4 {
+        @apply transition-all ease-in-out duration-400;
+    }
+
     .gator-animated {
         animation: customRotate 20s linear infinite;
     }
@@ -63,6 +87,10 @@
     .gator-static {
         transform: rotate(0deg) translate(25%, 25%);
         transform-origin: center center;
+    }
+
+    .profile-overview > .markdown-text p {
+        @apply mb-[20px] md:mb-[40px] lg:mb-[60px];
     }
 
     .markdown-article code {

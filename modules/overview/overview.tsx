@@ -1,6 +1,5 @@
 import React from "react";
 import {Heading} from '../../components/typography/heading';
-import { Text } from "../../components/typography/text";
 import { SectionWrapper } from "../../components/sectionWrapper";
 import { ProfileLink, profileLinkProps } from "./profileLink";
 import { v4 as uuidv4} from 'uuid';
@@ -10,6 +9,8 @@ import { Card, CardProps } from "../../components/card/card";
 import { CustomImage, customImageProps } from "../../components/image/image";
 import { GradientWrapper } from "../../components/gradients/gradientWrapper";
 import { Tags } from "../../components/tag/tags";
+import { GreaterThanIcon } from "../../components/icons/greater-than-icon";
+import { LessThanIcon } from "../../components/icons/less-than-icon";
 
 interface OverviewProps {
     /**
@@ -76,13 +77,17 @@ export const Overview = ({
                 <div className="col-span-12 md:col-span-6 lg:col-span-8">
                     <div className="flex flex-col gap-5">
                         {name &&
-                            <Heading hTag="1" fontSize={'text-4xl'}>{name}</Heading>                        
-                        }
+                            <div className="flex items-center gap-[10px]">
+                                <span className="w-[40px] h-[40px]"><GreaterThanIcon /></span>
+                                    <Heading variant={"primary"} weight={"bold"} fontStyle={"san-serif"} hTag="1" fontSize={"xl"}>{name}</Heading>                        
+                                <span className="w-[40px] h-[40px]"><LessThanIcon /></span>
+                            </div>
+                        }                    
                         {jobTitle && 
-                            <Heading hTag="2" fontSize="text-lg" fontStyle={'san-serif'} classes="font-bold">{jobTitle}</Heading>
+                            <Heading variant={"lighter"} hTag="2" fontSize={"lg"} fontStyle={'san-serif'} classes="font-normal">{jobTitle}</Heading>
                         }
                         {links &&
-                            <ul className="list-none flex flex-wrap gap-y-5">
+                            <ul className="list-none flex flex-col gap-y-5">
                                 {links?.map((link) => {
                                     let id = uuidv4();
                                     return(
@@ -97,9 +102,11 @@ export const Overview = ({
                             </ul>
                         }
                         {profileDesc && 
-                            <TextContent>
-                                {profileDesc}
-                            </TextContent>
+                            <div className="profile-overview">
+                                <TextContent>
+                                    {profileDesc}
+                                </TextContent>
+                            </div>
                         }
                         {resumeLink.label &&
                             <div className="lg:mt-5">
@@ -110,35 +117,35 @@ export const Overview = ({
                                 />
                             </div>
                         }
-                    </div>
-                    {Boolean(skillGroups?.length > 0) &&
-                        <div className="flex flex-col gap-3 mt-sm md:mt-md">
-                            {skillGroups?.map((group, index) => {   
-                                return (                 
-                                    <div key={index} className="flex flex-col gap-2">                               
-                                        {Boolean(group?.skills) &&
-                                            <Tags title={group?.title}  tags={group?.skills} />
-                                        }
-                                    </div>      
-                                )                                                                 
-                            })}
-                        </div>
-                    }
+                    </div>                 
                 </div>
                 <div className="col-span-12 md:col-span-6 lg:col-span-4">
-                    <div className="flex justify-center md:justify-end w-full">
+                    <div className="flex flex-col justify-center md:justify-end w-full">
                         <div className="rounded-full overflow-hidden w-[300px] h-[300px] relative">
-                          {profileImage &&
-                            <GradientWrapper>
-                                <CustomImage 
-                                    src={profileImage?.src}
-                                    alt={profileImage?.alt}
-                                    size={'profile'}
-                                    fit={'cover'}
-                                />
-                            </GradientWrapper>
-                          }
-                        </div>
+                            {profileImage &&
+                                <GradientWrapper>
+                                    <CustomImage 
+                                        src={profileImage?.src}
+                                        alt={profileImage?.alt}
+                                        size={'profile'}
+                                        fit={'cover'}
+                                    />
+                                </GradientWrapper>
+                            }                       
+                        </div>        
+                        {Boolean(skillGroups?.length > 0) &&
+                            <div className="flex flex-col gap-3 mt-sm md:mt-md">
+                                {skillGroups?.map((group, index) => {   
+                                    return (                 
+                                        <div key={index} className="flex flex-col gap-2">                               
+                                            {Boolean(group?.skills) &&
+                                                <Tags title={group?.title} tags={group?.skills} />
+                                            }
+                                        </div>      
+                                    )                                                                 
+                                })}
+                            </div>
+                        }             
                     </div>
                 </div>
             </div>           

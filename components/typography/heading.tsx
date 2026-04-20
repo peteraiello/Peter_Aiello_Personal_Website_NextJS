@@ -13,11 +13,15 @@ interface headingProps {
     /**
      * Font size
      */
-    fontSize?: 'text-sm' | 'text-md' | 'text-lg' | 'text-xl' | 'text-2xl' | 'text-3xl' | 'text-4xl' | 'text-5xl' | 'text-6xl',
+    fontSize?: "xl" | "lg" | "md" | "sm",
     /**
      * Weight
      */
     weight?: 'bold' | 'medium' | 'normal' | 'semibold',
+    /**
+     * Variant
+     */
+    variant?: "primary" | "lighter",
     /**
      * Classes (any additional classes you want to add)
      */
@@ -31,11 +35,27 @@ interface headingProps {
 export const Heading = ({
     hTag, 
     fontStyle = "serif",
-    fontSize,
+    fontSize = "lg",
     weight,
+    variant = "primary",
     classes,
     children
 }: headingProps) => {
+
+    const getFontColour = ({variant}) => {
+        let fontColour;
+        switch (variant) {
+            case 'primary': 
+                fontColour = 'text-brandRed dark:text-brandBlue';
+            break;
+            case 'lighter': 
+                fontColour = 'text-brandRedLighter dark:text-brandBlueLighter';
+            break;
+            default:
+                fontColour = 'text-brandBlue';
+        }
+        return fontColour;
+    }
 
      const getFontWeight = ({weight}) => {
         let textClass;
@@ -57,38 +77,38 @@ export const Heading = ({
         }
         return textClass;
     }
-    
-    const getHeadingClass = ({hTag}) => {
-        let headingClass;
-        switch (hTag) {
-            case '1': 
-            headingClass = 'text-6xl';
+
+    const getFontSize = ({fontSize}) => {
+        let fontClass; 
+        switch (fontSize) {
+            case "xl": 
+                fontClass = "text-[72px]"
             break;
-            case '2': 
-            headingClass = 'text-5xl';
-            break;
-            case '3':
-            headingClass = 'text-4xl';
-            break;
-            case '4': 
-            headingClass = 'text-3xl';
-            break;
-            case '5':
-            headingClass = 'text-2xl';
-            break;
-            case '6': 
-            headingClass = 'text-xl';
+            case "lg": 
+                fontClass = "text-[48px]"
+            break; 
+            case "md": 
+                fontClass = "text-[24px]" 
+            break; 
+            case "sm": 
+                fontClass = "text-[20px]"
             break;
         }
-        return headingClass;
+        return fontClass;
     }
     
     const fontClass = (fontStyle == "serif" ? "font-noto lowercase tracking-wider" : "font-open");
 
     const htmlTag = React.createElement(`h${hTag}`, {
         dangerouslySetInnerHTML: { __html: children },
-            className: cx("text-darkGray dark:text-white", fontClass, classes, fontSize ? fontSize : getHeadingClass({hTag}), weight && getFontWeight({weight}))
-    });
+            className: 
+                cx(
+                    fontClass, 
+                    classes, 
+                    getFontColour({variant}),
+                    getFontSize({fontSize}),
+                    weight && getFontWeight({weight}))
+        });
 
     return (
         htmlTag 

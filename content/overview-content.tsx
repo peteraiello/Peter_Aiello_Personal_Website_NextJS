@@ -7,18 +7,19 @@ export const profileImg = {
 
 export const exampleProfile = {
     sectionId: "overview",
-    name: 'Peter Aiello',
-    jobTitle: 'Full Stack Developer',
+    name: 'Peter Aiello.',
+    jobTitle: 'Full-stack web developer',
     profileImg: profileImg,
     profileDesc: 
-        `Hi 👋. I'm Peter, an experienced web developer from the UK currently living in Canada 🇨🇦. I have over eight years of industry experience in web development, with five years specializing in frontend web development. I've worked with clients from a variety of industries (automotive, financial, and charity) in diverse sectors (EV, FinTech, and specialist banking). Whether I'm building extensive component libraries or using cutting-edge frameworks, complexity is prevalent, and my strength lies in using resilience to see projects through to completion. Outside of work, I love running and have completed over four marathons. 
-    `,
+        `<p>Hi, I'm Peter, an experienced web developer from the UK currently living in Canada. I have over eight years of industry experience in web development, with five years specializing in front-end web development.</p> 
+        <p>I have worked with clients from a variety of industries (automotive, financial and charity) across diverse sectors (EU, FinTech and specialist Banking). Whether I am building extensive component libraries or using cutting-edge frameworks, complexity is prevalent, and my strength lies in using resilience to see projects through to completion.</p>
+        <p>Outside of work, I am an avid runner, having completed a variety of events, including four marathons.</p>`,
     links: 
         [
             {preLabel: 'WWW', label: 'peteraiello.dev', customLink: {href: 'https://peteraiello.dev', target: "_blank"}},
             {preLabel: 'EM', label: 'hello@peteraiello.dev', customLink: {href: 'mailto:hello@peteraiello.dev'}},
-            {preLabel: 'GIT', label: 'github.com/peteraiello', customLink: {href: 'https://github.com/peteraiello', target: "_blank"}},
-            {preLabel: 'IN', label: 'linkedin.com/in/peter-aiello', customLink: {href: 'https://linkedin.com/in/peter-aiello', target: "_blank"}}
+            {preLabel: 'IN', label: 'linkedin.com/in/peter-aiello', customLink: {href: 'https://linkedin.com/in/peter-aiello', target: "_blank"}},
+            {preLabel: 'GIT', label: 'github.com/peteraiello', customLink: {href: 'https://github.com/peteraiello', target: "_blank"}}
         ],
     resumeLink: {
         label: '',
