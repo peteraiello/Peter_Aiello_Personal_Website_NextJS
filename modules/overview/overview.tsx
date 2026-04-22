@@ -12,6 +12,7 @@ import { Tags } from "../../components/tag/tags";
 import { GreaterThanIcon } from "../../components/icons/greater-than-icon";
 import { LessThanIcon } from "../../components/icons/less-than-icon";
 import { ProfileImage } from "../../components/ProfileImage/ProfileImage";
+import { TrackStraight } from "../../components/icons/TrackStraight";
 
 interface OverviewProps {
     /**
