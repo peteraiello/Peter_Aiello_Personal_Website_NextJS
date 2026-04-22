@@ -6,13 +6,11 @@ import { v4 as uuidv4} from 'uuid';
 import { Button, buttonProps } from "../../components/button/button";
 import { TextContent } from "../../components/typography/textContent";
 import { Card, CardProps } from "../../components/card/card";
-import { CustomImage, customImageProps } from "../../components/image/image";
-import { GradientWrapper } from "../../components/gradients/gradientWrapper";
+import {  customImageProps } from "../../components/image/image";
 import { Tags } from "../../components/tag/tags";
 import { GreaterThanIcon } from "../../components/icons/greater-than-icon";
 import { LessThanIcon } from "../../components/icons/less-than-icon";
 import { ProfileImage } from "../../components/ProfileImage/ProfileImage";
-import { TrackStraight } from "../../components/icons/TrackStraight";
 
 interface OverviewProps {
     /**
@@ -74,19 +72,27 @@ export const Overview = ({
     profileImage
 }:OverviewProps) => {
     return (
-        <SectionWrapper id={id}>
+        <SectionWrapper id={id} theme={"overview"}>
             <div className="grid gap-y-5 grid-cols-12">
                 <div className="col-span-12 md:col-span-8 lg:col-span-7">
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-[40px] md:gap-[60px] lg:gap-[80px]">
                         {name &&
                             <div className="flex items-center gap-[10px]">
-                                <span className="w-[40px] h-[40px]"><GreaterThanIcon /></span>
-                                    <Heading variant={"primary"} weight={"bold"} fontStyle={"san-serif"} hTag="1" fontSize={"xl"}>{name}</Heading>                        
-                                <span className="w-[40px] h-[40px]"><LessThanIcon /></span>
+                                <span className="w-[40px] h-[40px]">
+                                    <GreaterThanIcon />
+                                </span>
+                                    {name && 
+                                        <h1 className="font-bold text-brandBlue text-[40px] md:text-[65px] lg:text-[72px]">{name}</h1>
+                                    }
+                                <span className="w-[40px] h-[40px]">
+                                    <LessThanIcon />
+                                </span>
                             </div>
                         }                    
                         {jobTitle && 
-                            <Heading variant={"lighter"} hTag="2" fontSize={"lg"} fontStyle={'san-serif'} classes="font-normal">{jobTitle}</Heading>
+                            <div className="mb-[40px] md:mb-lg xl:mb-[145px] w-full md:w-[80%] xl:w-full">
+                                <Heading variant={"lighter"} hTag="2" fontSize={"lg"} fontStyle={'san-serif'} classes="font-normal">{jobTitle}</Heading>
+                            </div>
                         }
                         {links &&
                             <ul className="list-none flex flex-col gap-y-5">
@@ -103,6 +109,7 @@ export const Overview = ({
                                 })}
                             </ul>
                         }
+                        
                         {profileDesc && 
                             <div className="profile-overview w-full md:w-[80%]">
                                 <TextContent>
@@ -110,6 +117,7 @@ export const Overview = ({
                                 </TextContent>
                             </div>
                         }
+
                         {resumeLink.label &&
                             <div className="lg:mt-5">
                                 <Button 

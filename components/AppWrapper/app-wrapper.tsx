@@ -15,7 +15,7 @@ export const AppWrapper = ({children}) => {
     }
 
     return (
-        <div className={darkThemeActive === true ? 'dark bg-darkerGray' : '' } 
+        <div className={darkThemeActive === true ? 'dark bg-darkGray' : '' } 
             onKeyDown={(e) => onKeyPressed(e)} tabIndex={0}
         >
             <GradientWrapper>

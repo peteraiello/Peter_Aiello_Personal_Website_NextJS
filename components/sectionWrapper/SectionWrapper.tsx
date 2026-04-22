@@ -13,11 +13,16 @@ interface SectionWrapperProps {
      * Sectiion ID
      */
     id?: string,
+    /**
+     * Theme (i.e. overview)
+     */
+    theme?: "overview"
 }
 
 export const SectionWrapper = ({
     id,
-    children
+    children,
+    theme
 }: SectionWrapperProps
     ) => {
 
@@ -40,14 +45,18 @@ export const SectionWrapper = ({
             <div className="translate-x-[60%]">
             </div>
 
-            <div className="flex gap-[100px]">
-                <div className="w-full md:w-[50%]">
-                    <TrackStraight />
+            {theme === "overview" ?             
+                <div className="flex gap-[100px]">
+                    <div className="w-full md:w-[50%]">
+                        <TrackStraight />
+                    </div>
+                    <div className="hidden md:block md:w-[40%]">
+                        <Initials />
+                    </div>
                 </div>
-                <div className="hidden md:block md:w-[40%]">
-                    <Initials />
-                </div>
-            </div>
+            :
+            <></>
+            }
 
         </section>
     )
