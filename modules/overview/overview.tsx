@@ -11,6 +11,7 @@ import { GradientWrapper } from "../../components/gradients/gradientWrapper";
 import { Tags } from "../../components/tag/tags";
 import { GreaterThanIcon } from "../../components/icons/greater-than-icon";
 import { LessThanIcon } from "../../components/icons/less-than-icon";
+import { ProfileImage } from "../../components/ProfileImage/ProfileImage";
 
 interface OverviewProps {
     /**
@@ -74,7 +75,7 @@ export const Overview = ({
     return (
         <SectionWrapper id={id}>
             <div className="grid gap-y-5 grid-cols-12">
-                <div className="col-span-12 md:col-span-6">
+                <div className="col-span-12 md:col-span-8 lg:col-span-7">
                     <div className="flex flex-col gap-5">
                         {name &&
                             <div className="flex items-center gap-[10px]">
@@ -102,7 +103,7 @@ export const Overview = ({
                             </ul>
                         }
                         {profileDesc && 
-                            <div className="profile-overview">
+                            <div className="profile-overview w-full md:w-[80%]">
                                 <TextContent>
                                     {profileDesc}
                                 </TextContent>
@@ -119,20 +120,11 @@ export const Overview = ({
                         }
                     </div>                 
                 </div>
-                <div className="col-span-12 md:col-start-8 md:col-span-5">
+                <div className="col-span-12 md:col-span-4 lg:col-span-5">
                     <div className="flex flex-col justify-center md:justify-end w-full">
-                        <div className="rounded-full overflow-hidden w-[300px] h-[300px] relative">
-                            {profileImage &&
-                                <GradientWrapper>
-                                    <CustomImage 
-                                        src={profileImage?.src}
-                                        alt={profileImage?.alt}
-                                        size={'profile'}
-                                        fit={'cover'}
-                                    />
-                                </GradientWrapper>
-                            }                       
-                        </div>        
+                        {profileImage?.src &&
+                            <ProfileImage image={{src: profileImage?.src}} />                   
+                        }
                         {Boolean(skillGroups?.length > 0) &&
                             <div className="flex flex-col gap-3 mt-sm md:mt-md">
                                 {skillGroups?.map((group, index) => {   

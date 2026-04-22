@@ -11,7 +11,7 @@ interface headingProps {
      */
     fontStyle?: 'serif' | 'san-serif',
     /**
-     * Font size
+     * Font size (xl: 72px, lg:48px, md:24px, sm:20px)
      */
     fontSize?: "xl" | "lg" | "md" | "sm",
     /**
@@ -82,16 +82,16 @@ export const Heading = ({
         let fontClass; 
         switch (fontSize) {
             case "xl": 
-                fontClass = "text-[72px]"
+                fontClass = "text-[58px] md:text-[65px] lg:text-[72px]"
             break;
             case "lg": 
-                fontClass = "text-[48px]"
+                fontClass = "text-[39px] md:text-[43px] lg:text-[48px]"
             break; 
             case "md": 
-                fontClass = "text-[24px]" 
+                fontClass = "text-[20px] md:text-[22px] lg:text-[24px]" 
             break; 
             case "sm": 
-                fontClass = "text-[20px]"
+                fontClass = "text-[16px] md:text-[18px] lg:text-[20px]"
             break;
         }
         return fontClass;

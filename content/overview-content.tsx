@@ -1,4 +1,4 @@
-import ProfileImg from '../public/images/overview/peter_aiello_fullstack_web_developer.jpg';
+import ProfileImg from '../public/images/overview/peter_aiello_profile.jpg';
 
 export const profileImg = {
     src: ProfileImg.src,
@@ -29,11 +29,11 @@ export const exampleProfile = {
     skillGroups: [
         {
             title: 'Hard Skills',
-            skills: ["JavaScript", "TypeScript", "React", "Next.JS", "Gatsby", "Storybook", "Jest", "Tailwind CSS", "WordPress", "PHP", "UI & UX Design"],
+            skills: ["JavaScript", "TypeScript", "React", "Next.JS", "Gatsby", "Storybook", "Jest", "Tailwind CSS", "UI & UX Design"],
         },
         {
             title: 'Soft Skills',
-            skills: ["Collaboration", "Problem Solving", "Attention to Detail", "Adaptability"],
+            skills: ["Collaboration", "Problem Solving", "Adaptability", "Attention to Detail"],
         },
     ],
     cards: 

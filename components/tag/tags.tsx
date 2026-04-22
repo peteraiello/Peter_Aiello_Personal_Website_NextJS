@@ -22,21 +22,20 @@ export const Tags = ({
         <>
             {(tags && tags.length > 0) &&
                 title &&
-                        <div className="flex items-center">
-                            <Heading hTag={'3'} fontStyle={'san-serif'} fontSize={'text-xl'} classes="font-bold">
-                                {title}
-                            </Heading>                    
-                        </div>
-                }
-                <div className='flex gap-inherit flex-wrap gap-3'>                                                       
-                    {tags.map((tag, index) => {
-                        let id = uuidv4();
-                        return(
-                            <Tag key={id} index={index}>{tag}</Tag>
-                        )
-                    })}
-                </div>
-            
+                    <div className="flex items-center">
+                        <Heading hTag={'3'} fontStyle={'san-serif'} fontSize={'md'} classes="font-bold">
+                            {title}
+                        </Heading>                    
+                    </div>
+            }
+            <div className='flex gap-inherit flex-wrap gap-3'>                                                       
+                {tags.map((tag, index) => {
+                    let id = uuidv4();
+                    return(
+                        <Tag key={id} index={index}>{tag}</Tag>
+                    )
+                })}
+            </div>
         </>
     )
 
