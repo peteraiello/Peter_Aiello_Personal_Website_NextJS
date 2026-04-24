@@ -22,13 +22,13 @@ export const Tags = ({
         <>
             {(tags && tags.length > 0) &&
                 title &&
-                    <div className="flex items-center">
+                    <div className="flex items-center mb-9">
                         <Heading hTag={'3'} fontStyle={'san-serif'} fontSize={'md'} classes="font-bold">
                             {title}
                         </Heading>                    
                     </div>
             }
-            <div className='flex gap-inherit flex-wrap gap-3'>                                                       
+            <div className='flex gap-inherit flex-wrap gap-5'>                                                       
                 {tags.map((tag, index) => {
                     let id = uuidv4();
                     return(

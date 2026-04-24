@@ -93,6 +93,10 @@
         @apply mb-[20px] md:mb-[40px] lg:mb-[60px];
     }
 
+    .profile-overview > .markdown-text p:last-of-type {
+        @apply mb-[0];
+    }
+
     .markdown-article code {
         @apply bg-brandBlue/10 text-darkGray font-semibold dark:bg-gray-800 dark:text-white p-1 rounded-sm text-sm;
     }

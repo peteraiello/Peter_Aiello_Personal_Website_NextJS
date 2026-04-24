@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect }  from "react";
 import Link from "next/link";
-import {HeaderIcon} from './logo';
-import { AIcon } from "./a-logo";
 import { LogoNew } from "./logo-new";
 import { ThemeToggleButton } from "../../components/button/theme-toggle";
 

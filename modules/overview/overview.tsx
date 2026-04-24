@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {Heading} from '../../components/typography/heading';
 import { SectionWrapper } from "../../components/sectionWrapper";
 import { ProfileLink, profileLinkProps } from "./profileLink";
@@ -60,6 +60,22 @@ interface OverviewProps {
     profileImage?: customImageProps,
 }
 
+function useIsMobile(breakpoint = 768) {
+    const [isMobile, setIsMobile] = useState(
+      () => window.innerWidth <= breakpoint
+    );
+  
+    useEffect(() => {
+      const mql = window.matchMedia(`(max-width: ${breakpoint}px)`);
+      const handler = (e) => setIsMobile(e.matches);
+  
+      mql.addEventListener("change", handler);
+      return () => mql.removeEventListener("change", handler);
+    }, [breakpoint]);
+  
+    return isMobile;
+  }
+
 export const Overview = ({
     name, 
     jobTitle,
@@ -71,6 +87,9 @@ export const Overview = ({
     id,
     profileImage
 }:OverviewProps) => {
+
+    const isMobile = useIsMobile();
+
     return (
         <SectionWrapper id={id} theme={"overview"}>
             <div className="grid gap-y-5 grid-cols-12">
@@ -88,12 +107,23 @@ export const Overview = ({
                                     <LessThanIcon />
                                 </span>
                             </div>
-                        }                    
+                        }                                
                         {jobTitle && 
-                            <div className="mb-[40px] md:mb-lg xl:mb-[145px] w-full md:w-[80%] xl:w-full">
+                            <div className="md:mb-lg xl:mb-[145px] w-full md:w-[80%] xl:w-full">
                                 <Heading variant={"lighter"} hTag="2" fontSize={"lg"} fontStyle={'san-serif'} classes="font-normal">{jobTitle}</Heading>
                             </div>
                         }
+
+                        {/* profile image mobile start */}
+                        {(profileImage?.src && isMobile) &&
+                            <div className="flex justify-center">
+                                <div className="w-[60%]">
+                                    <ProfileImage image={{src: profileImage?.src}} />                   
+                                </div>
+                            </div>
+                        }
+                        {/* profile image mobile end */}
+
                         {links &&
                             <ul className="list-none flex flex-col gap-y-5">
                                 {links?.map((link) => {
@@ -131,11 +161,13 @@ export const Overview = ({
                 </div>
                 <div className="col-span-12 md:col-span-4 lg:col-span-5">
                     <div className="flex flex-col justify-center md:justify-end w-full">
-                        {profileImage?.src &&
+                                                
+                        {(profileImage?.src && !isMobile) &&
                             <ProfileImage image={{src: profileImage?.src}} />                   
                         }
+
                         {Boolean(skillGroups?.length > 0) &&
-                            <div className="flex flex-col gap-3 mt-sm md:mt-md">
+                            <div className="flex flex-col gap-sm md:gap-md lg:gap-[60px] mt-sm md:mt-md">
                                 {skillGroups?.map((group, index) => {   
                                     return (                 
                                         <div key={index} className="flex flex-col gap-2">                               
