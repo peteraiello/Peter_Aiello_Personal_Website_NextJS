@@ -3,20 +3,23 @@ import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
 
 
 interface ProfileImageProps {
+    mobileOnly?: boolean,
     image: {
         src?: string
     }
 }
 
 export const ProfileImage = ({
+    mobileOnly,
     image   
 }:ProfileImageProps) => {
 
-    const {darkThemeActive, toggleDarkTheme} = useContext(ThemeContext);
-
+    const {darkThemeActive} = useContext(ThemeContext);
 
     return (
-        <>
+
+
+        <div className={`${mobileOnly ? "block md:hidden" : ""}`}>
             <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 425.2 640.82">
             <defs>              
                 <clipPath id="clippath">
@@ -79,6 +82,7 @@ export const ProfileImage = ({
                 </g>
             </g>
             </svg>
-        </>
+        </div>
+        
     )
 }

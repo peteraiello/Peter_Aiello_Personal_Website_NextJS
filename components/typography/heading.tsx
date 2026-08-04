@@ -97,7 +97,7 @@ export const Heading = ({
         return fontClass;
     }
     
-    const fontClass = (fontStyle == "serif" ? "font-noto lowercase tracking-wider" : "font-open");
+    const fontClass = (fontStyle == "serif" ? "font-noto tracking-wider" : "font-open");
 
     const htmlTag = React.createElement(`h${hTag}`, {
         dangerouslySetInnerHTML: { __html: children },

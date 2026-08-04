@@ -60,21 +60,7 @@ interface OverviewProps {
     profileImage?: customImageProps,
 }
 
-function useIsMobile(breakpoint = 768) {
-    const [isMobile, setIsMobile] = useState(
-      () => window.innerWidth <= breakpoint
-    );
-  
-    useEffect(() => {
-      const mql = window.matchMedia(`(max-width: ${breakpoint}px)`);
-      const handler = (e) => setIsMobile(e.matches);
-  
-      mql.addEventListener("change", handler);
-      return () => mql.removeEventListener("change", handler);
-    }, [breakpoint]);
-  
-    return isMobile;
-  }
+ 
 
 export const Overview = ({
     name, 
@@ -88,8 +74,9 @@ export const Overview = ({
     profileImage
 }:OverviewProps) => {
 
-    const isMobile = useIsMobile();
+  
 
+ 
     return (
         <SectionWrapper id={id} theme={"overview"}>
             <div className="grid gap-y-5 grid-cols-12">
@@ -114,16 +101,12 @@ export const Overview = ({
                             </div>
                         }
 
-                        {/* profile image mobile start */}
-                        {(profileImage?.src && isMobile) &&
-                            <div className="flex justify-center">
-                                <div className="w-[60%]">
-                                    <ProfileImage image={{src: profileImage?.src}} />                   
-                                </div>
+                        <div className="flex justify-center">
+                            <div className="w-[60%]">
+                                <ProfileImage image={{src: profileImage?.src}} mobileOnly={true} />                   
                             </div>
-                        }
-                        {/* profile image mobile end */}
-
+                        </div>
+ 
                         {links &&
                             <ul className="list-none flex flex-col gap-y-5">
                                 {links?.map((link) => {
@@ -162,10 +145,8 @@ export const Overview = ({
                 <div className="col-span-12 md:col-span-4 lg:col-span-5">
                     <div className="flex flex-col justify-center md:justify-end w-full">
                                                 
-                        {(profileImage?.src && !isMobile) &&
-                            <ProfileImage image={{src: profileImage?.src}} />                   
-                        }
-
+                        <ProfileImage image={{src: profileImage?.src}} />                   
+ 
                         {Boolean(skillGroups?.length > 0) &&
                             <div className="flex flex-col gap-sm md:gap-md lg:gap-[60px] mt-sm md:mt-md">
                                 {skillGroups?.map((group, index) => {   

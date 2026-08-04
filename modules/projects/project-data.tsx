@@ -140,7 +140,7 @@ const WealthtimeCard = {
 
 export const exampleProjectData = {
     id: 'projects',
-    title: 'projects',
+    title: 'Portfolio',
     layout: 'alternating',
     filters: {
         skills: ["Skills", "React", "Next", "TypeScript", "Sanity CMS", "Tailwind CSS", "GraphQL", "WordPress", "PHP", "JavaScript", "Gatsby", "Multisite", "SASS"],
