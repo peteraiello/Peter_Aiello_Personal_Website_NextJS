@@ -1,6 +1,6 @@
 ---
 id: 'wealthtime'
-status: 'published'
+status: 'unpublished'
 thumbnail:
   src: '/images/projects/wealthtime.jpg'
   alt: 'Wealthtime website'

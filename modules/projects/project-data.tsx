@@ -4,6 +4,31 @@ import WealthtimeThumbnail from '../../public/images/projects/wealthtime.jpg';
 import IntraThumbnail from '../../public/images/projects/intra-calc.jpg';
 import HTBThumbnail from "../../public/images/projects/htb.jpg";
 import Cap10Thumbnail from "../../public/images/projects/cap10.jpg";
+import KellerThumbnail from "../../public/images/projects/keller.jpg"
+
+
+const KellerCard = {
+    id: `keller`,
+    status: "published",
+    thumbnail: {
+        src: KellerThumbnail?.src,
+        alt: "Keller website"
+    },
+    featuredImage: {
+        src: KellerThumbnail?.src,
+        alt: "Keller website"
+    },
+    title: `Keller`,
+    industry: "Engineering",
+    featured: true,
+    tags: ["Twig", "Drupal", "Storybook"],
+    excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum leo non enim sollicitudin imperdiet.`,
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget magna commodo, maximus quam ac, posuere neque. Fusce a vulputate risus. Quisque vel nisi magna. Praesent sodales ante eu massa maximus faucibus. Nunc rutrum interdum pellentesque. Suspendisse felis purus, pharetra sed tempus nec, tempor quis urna. Donec eget leo cursus.`,
+    buttonLink: {
+        label: "LEARN MORE",
+        href: "https://www.dusted.com"
+    }
+}
 
 const DustedCard = {
     id: `dusted`,

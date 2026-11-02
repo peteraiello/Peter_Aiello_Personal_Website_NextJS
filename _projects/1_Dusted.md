@@ -29,7 +29,7 @@ gallery: [
 ]
 title: 'Dusted'
 industry: 'Marketing'
-featured: true
+featured: false
 client: 'Dusted'
 tags: ["React", "Next", "TypeScript", "Sanity CMS", "Tailwind CSS"]
 excerpt: "A future ready rebuild for an award winning design agency."
