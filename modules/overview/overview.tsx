@@ -145,7 +145,7 @@ export const Overview = ({
                         </div>
  
                         {Boolean(skillGroups?.length > 0) &&
-                            <div className="flex flex-col gap-sm md:gap-md lg:gap-[60px] mt-sm md:mt-md">
+                            <div className="flex flex-col gap-md lg:gap-[60px] mt-sm md:mt-md">
                                 {skillGroups?.map((group, index) => {   
                                     return (                 
                                         <div key={index} className="flex flex-col gap-2">                               
