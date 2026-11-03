@@ -1,4 +1,4 @@
-import ProfileImg from '../public/images/overview/peter_aiello_profile.jpg';
+import ProfileImg from '../public/images/overview/profile_pic.png';
 
 export const profileImg = {
     src: ProfileImg.src,

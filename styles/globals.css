@@ -37,6 +37,19 @@
 }
 
 @layer components {
+/* 
+    .profile-image-wrapper {
+        clip-path: rect(5px 330px 660px 5px round 20%);
+    } */
+
+    .profile-image {
+        /* width: 360px;
+        height: 660px;
+        display: block; */
+        /* clip-path: rect(5px 145px 600px 5px round 20%); */
+        @apply bg-red-600; 
+    }
+
     .wrapper {
         @apply container mx-auto px-3 md:px-0;
     }

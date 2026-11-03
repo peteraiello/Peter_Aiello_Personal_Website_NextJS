@@ -88,7 +88,7 @@ export const Overview = ({
                                     <GreaterThanIcon />
                                 </span>
                                     {name && 
-                                        <h1 className="font-bold text-brandBlue text-[40px] md:text-[65px] lg:text-[72px]">{name}</h1>
+                                        <h1 className="font-bold dark:text-brandBlue text-brandRed text-[40px] md:text-[65px] lg:text-[72px]">{name}</h1>
                                     }
                                 <span className="w-[40px] h-[40px]">
                                     <LessThanIcon />
