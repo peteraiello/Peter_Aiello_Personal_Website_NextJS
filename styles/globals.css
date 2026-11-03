@@ -48,11 +48,6 @@
 }
 
 @layer components {
-
-    .main-name-heading {
-        @apply md:text-nowrap;
-    }
-
     .wrapper {
         @apply container mx-auto px-3 md:px-0;
     }
