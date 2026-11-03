@@ -79,7 +79,7 @@ export const BlogArticle = ({
                                     {featured &&
                                         <StarIcon />
                                     }
-                                        <Heading hTag={"4"} fontSize={"text-xl"} fontStyle={"san-serif"} weight={"semibold"}>{title}</Heading>
+                                        <Heading hTag={"4"} fontSize={"xl"} fontStyle={"san-serif"} weight={"semibold"}>{title}</Heading>
                                 </div>
                             }                           
                         </div>

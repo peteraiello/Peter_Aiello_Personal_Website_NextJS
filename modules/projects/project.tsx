@@ -103,11 +103,11 @@ export const Project = ({
                                     {featured &&
                                         <StarIcon />
                                     }
-                                    <Heading hTag={"4"} fontSize={"text-xl"} fontStyle={"san-serif"} weight={"semibold"}>{'Client - ' + client}</Heading>
+                                    <Heading hTag={"4"} fontSize={"xl"} fontStyle={"san-serif"} weight={"semibold"}>{'Client - ' + client}</Heading>
                                 </div>
                             }
                             {agency &&
-                                <Heading hTag={"4"} fontSize={"text-xl"} fontStyle={"san-serif"} weight={"semibold"}>{'Agency - Dusted'}</Heading>
+                                <Heading hTag={"4"} fontSize={"xl"} fontStyle={"san-serif"} weight={"semibold"}>{'Agency - Dusted'}</Heading>
                             }
                         </div>
                         {description &&
