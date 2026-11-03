@@ -11,8 +11,7 @@ export const exampleProfile = {
     jobTitle: 'Full-stack web developer',
     profileImg: profileImg,
     profileDesc: 
-        `<p>Hi, I'm Peter, an experienced web developer from the UK currently living in Canada. I have over eight years of industry experience in web development, with five years specializing in front-end web development.</p> 
-        <p>I have worked with clients from a variety of industries (automotive, financial and charity) across diverse sectors (EU, FinTech and specialist Banking). Whether I am building extensive component libraries or using cutting-edge frameworks, complexity is prevalent, and my strength lies in using resilience to see projects through to completion.</p>
+        `<p>Hi, I'm Peter, an experienced web developer from the UK currently living in Canada. I have over eight years of industry experience in web development, with five years specializing in front-end web development. I have worked with clients from a variety of industries (automotive, financial and charity) across diverse sectors (EU, FinTech and specialist Banking). Whether I am building extensive component libraries or using cutting-edge frameworks, complexity is prevalent, and my strength lies in using resilience to see projects through to completion. 
         <p>Outside of work, I am an avid runner, having completed a variety of events, including four marathons.</p>`,
     links: 
         [

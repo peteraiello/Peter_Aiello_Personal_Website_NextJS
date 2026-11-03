@@ -41,7 +41,7 @@ export const ProfileLink = ({
                     }
                 </div>               
                 {label &&
-                    <span className="text-[21px] text-brandRed border-brandRed dark:text-brandBlue hover:opacity-90 underline">{label}</span>
+                    <span className="relative text-[21px] text-brandRed dark:text-brandBlue hover:opacity-90 after:absolute after:left-0 after:right-0 after:top-full after:mt-[-4px] after:h-px after:bg-current after:content-['']">{label}</span>
                 }
             </a>
         </li>
