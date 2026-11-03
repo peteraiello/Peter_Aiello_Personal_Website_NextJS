@@ -106,7 +106,7 @@
     }
 
     .profile-overview > .markdown-text p {
-        @apply mb-[20px] md:mb-[40px] lg:mb-[60px];
+        @apply mb-[20px] md:mb-[40px];
     }
 
     .profile-overview > .markdown-text p:last-of-type {

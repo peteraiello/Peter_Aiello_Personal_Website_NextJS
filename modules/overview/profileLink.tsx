@@ -28,7 +28,7 @@ export const ProfileLink = ({
 }:profileLinkProps) => {    
     return (
         <li className="w-full">
-            <a href={customLink?.href} target={customLink?.target} className={"flex flex-row items-center gap-[10px]"}>
+            <a href={customLink?.href} target={customLink?.target} className={"flex flex-row items-center gap-[10px] group"}>
                 <div className={"icon-wrapper w-[40px] h-[40px]"}>
                     {preLabel === "WWW" ? 
                         <SiteIcon />
@@ -39,9 +39,10 @@ export const ProfileLink = ({
                     : preLabel === "GIT" &&
                         <GitIcon />                
                     }
-                </div>               
+                </div>   
+            
                 {label &&
-                    <span className="relative text-[21px] font-transducer text-brandRed dark:text-brandBlue hover:opacity-90 after:absolute after:left-0 after:right-0 after:top-full after:mt-[-4px] after:h-px after:bg-current after:content-['']">{label}</span>
+                    <span className="relative text-[21px] font-transducer text-brandRed dark:text-brandBlue group-hover:opacity-90 after:w-[0] group-hover:after:w-full after:transition-all after:ease-in-out after:duration-300 after:border-brandRed dark:after:border-brandBlue after:border-b-[1px] after:block">{label}</span>
                 }
             </a>
         </li>

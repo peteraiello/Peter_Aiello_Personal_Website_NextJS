@@ -46,7 +46,7 @@ export const SectionWrapper = ({
             </div>
 
             {theme === "overview" ?             
-                <div className="flex gap-[100px] mt-[118px]">
+                <div className="flex gap-[100px] mt-[50px] md:mt-[118px]">
                     <div className="w-full md:w-[50%]">
                         <TrackStraight />
                     </div>

@@ -108,8 +108,8 @@ export default function Home({
                             }
                         }
                         skillGroups={exampleProfile.skillGroups}
-                    />            
-                {/* 
+                    />
+                    {/*
                     <Projects                         
                         id={exampleProjectData?.id}
                         title={exampleProjectData?.title}    
@@ -147,8 +147,8 @@ export default function Home({
                         featuredImage={activeCard?.featuredImage}
                         content={activeCard?.content}
                         buttonLink={activeCard?.buttonLink}
-                        gallery={activeCard?.gallery}                
-                    />                                 
+                        gallery={activeCard?.gallery}
+                    />
                 */}
                 </AppWrapper>
             </ThemeProvider>         

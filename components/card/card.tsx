@@ -139,7 +139,7 @@ export const Card = ({
                             <div className="title-wrapper flex flex-row gap-2 items-center">
                                 {title &&
                                     <Heading 
-                                        fontSize={"text-2xl"} 
+                                        fontSize={"xl"} 
                                         fontStyle={"san-serif"} 
                                         weight={"bold"}
                                         hTag={"3"}

@@ -37,7 +37,6 @@ export const exampleProfile = {
             skills: ["UI and UX Design"]
         }
     ],
-
     resumeLink: {
         label: '',
         href: '',

@@ -160,7 +160,7 @@ export const ProjectModal = ({
                     </div>
                     <div className="project-modal-text__wrap flex flex-col gap-sm w-full md:w-1/2">
                         {title &&                        
-                            <Heading hTag={"2"} fontSize={"text-2xl"} weight={"bold"} fontStyle={"san-serif"}>
+                            <Heading hTag={"2"} fontSize={"xl"} weight={"bold"} fontStyle={"san-serif"}>
                                 {title}
                             </Heading>
                         }

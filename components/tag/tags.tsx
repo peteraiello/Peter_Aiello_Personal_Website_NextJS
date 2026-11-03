@@ -22,7 +22,7 @@ export const Tags = ({
         <>
             {(tags && tags.length > 0) &&
                 title &&
-                    <div className="flex items-center mb-9">
+                    <div className="flex items-center mb-4 lg:mb-9">
                         <Heading hTag={'3'} fontStyle={'san-serif'} fontSize={'md'} weight={"bold"}>
                             {title}
                         </Heading>                    
