@@ -13,6 +13,9 @@ export default function Document() {
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <link rel="manifest" href="/site.webmanifest" />
+                <link rel="preconnect" href="https://use.typekit.net" />
+                <link rel="preconnect" href="https://p.typekit.net" />
+                <link rel="stylesheet" href="https://use.typekit.net/eei4lut.css" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />

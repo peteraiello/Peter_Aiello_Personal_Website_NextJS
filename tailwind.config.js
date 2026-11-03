@@ -13,7 +13,11 @@ module.exports = {
     theme: {
       fontFamily: {
         noto: ['"Noto Serif"', ...defaultTheme.fontFamily.serif],
-        open: ['"Open Sans"', ...defaultTheme.fontFamily.sans]
+        open: ['"Open Sans"', ...defaultTheme.fontFamily.sans],
+        transducer: ['"transducer-extended"', ...defaultTheme.fontFamily.sans],
+        carbon: ['"t26-carbon"', 'monospace'],
+        'transducer-extended': ['"transducer-extended"', ...defaultTheme.fontFamily.sans],
+        't26-carbon': ['"t26-carbon"', 'monospace'],
       },
       extend: {
         spacing: {

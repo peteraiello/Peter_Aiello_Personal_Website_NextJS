@@ -61,7 +61,7 @@ export const Heading = ({
         let textClass;
         switch (weight) {
             case 'bold': 
-                textClass = 'font-bold';
+                textClass = 'font-[600]';
             break;
             case 'semibold': 
                 textClass = 'font-semibold';
@@ -82,7 +82,7 @@ export const Heading = ({
         let fontClass; 
         switch (fontSize) {
             case "xl": 
-                fontClass = "text-[58px] md:text-[65px] lg:text-[72px]"
+                fontClass = "text-[40px] md:text-[48px] lg:text-[72px]"
             break;
             case "lg": 
                 fontClass = "text-[39px] md:text-[43px] lg:text-[48px]"
@@ -97,7 +97,7 @@ export const Heading = ({
         return fontClass;
     }
     
-    const fontClass = (fontStyle == "serif" ? "font-noto tracking-wider" : "font-open");
+    const fontClass = (fontStyle == "serif" ? "font-courier tracking-wider" : "font-transducer");
 
     const htmlTag = React.createElement(`h${hTag}`, {
         dangerouslySetInnerHTML: { __html: children },
@@ -111,6 +111,6 @@ export const Heading = ({
         });
 
     return (
-        htmlTag 
+        htmlTag
     )
 }

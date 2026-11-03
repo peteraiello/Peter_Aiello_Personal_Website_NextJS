@@ -37,7 +37,7 @@ export const SectionWrapper = ({
             className={` transition-all ease-in-out duration-500 text-darkGray dark:text-white ${isInView ? 'opacity-100 translate-y-0' : 'translate-y-10 opacity-0'}`}
         >
             {children &&
-                <div className="wrapper max-w-[1200px] px-5">
+                <div className="wrapper max-w-[1400px] px-5">
                     {children}
                 </div>
             }
@@ -46,7 +46,7 @@ export const SectionWrapper = ({
             </div>
 
             {theme === "overview" ?             
-                <div className="flex gap-[100px]">
+                <div className="flex gap-[100px] mt-[118px]">
                     <div className="w-full md:w-[50%]">
                         <TrackStraight />
                     </div>

@@ -109,7 +109,7 @@ export default function Home({
                         }
                         skillGroups={exampleProfile.skillGroups}
                     />            
-
+                {/* 
                     <Projects                         
                         id={exampleProjectData?.id}
                         title={exampleProjectData?.title}    
@@ -149,6 +149,7 @@ export default function Home({
                         buttonLink={activeCard?.buttonLink}
                         gallery={activeCard?.gallery}                
                     />                                 
+                */}
                 </AppWrapper>
             </ThemeProvider>         
         </>

@@ -1,4 +1,15 @@
 /* styles/globals.css */
+/* Fonts */ 
+
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
+
+/* Transducer extended regular */
+@import url("https://use.typekit.net/eei4lut.css");
+/* Transducer extended bold */
+/* @import url("https://use.typekit.net/eei4lut.css"); */
+/* Carbon regular */
+/* @import url("https://use.typekit.net/eei4lut.css"); */
+
 @import 'tailwindcss/tailwind.css';
 
 @tailwind base;
@@ -37,6 +48,11 @@
 }
 
 @layer components {
+
+    .main-name-heading {
+        @apply md:text-nowrap;
+    }
+
     .wrapper {
         @apply container mx-auto px-3 md:px-0;
     }
@@ -127,6 +143,7 @@
     }
 
     .markdown-text {
+        font-family: "t26-carbon", 'Courier New', Courier, monospace;
         @apply prose 
         transition-all 
         duration-300  
