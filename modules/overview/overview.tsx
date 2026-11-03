@@ -60,8 +60,6 @@ interface OverviewProps {
     profileImage?: customImageProps,
 }
 
- 
-
 export const Overview = ({
     name, 
     jobTitle,
@@ -72,16 +70,19 @@ export const Overview = ({
     cards,
     id,
     profileImage
-}:OverviewProps) => {
-
-  
-
- 
+}:OverviewProps) => { 
     return (
         <SectionWrapper id={id} theme={"overview"}>
             <div className="grid gap-y-5 grid-cols-12">
                 <div className="col-span-12 md:col-span-8 lg:col-span-7">
                     <div className="flex flex-col gap-[40px] md:gap-[60px] lg:gap-[80px]">
+                        {profileImage?.src && 
+                            <div className="flex items-center justify-center md:hidden">     
+                                <div className="w-[60%]">
+                                    <ProfileImage image={{src: profileImage?.src, alt: "peter aiello profile pic mobile"}} />                   
+                                </div>
+                            </div>
+                        }
                         {name &&
                             <div className="flex items-center gap-[10px]">
                                 <span className="w-[40px] h-[40px]">
@@ -89,24 +90,18 @@ export const Overview = ({
                                 </span>
                                     {name && 
                                         <h1 className="font-bold dark:text-brandBlue text-brandRed text-[40px] md:text-[65px] lg:text-[72px]">{name}</h1>
-                                    }
+                                    }                            
                                 <span className="w-[40px] h-[40px]">
                                     <LessThanIcon />
                                 </span>
                             </div>
-                        }                                
+                        }                                                        
                         {jobTitle && 
                             <div className="md:mb-lg xl:mb-[145px] w-full md:w-[80%] xl:w-full">
                                 <Heading variant={"lighter"} hTag="2" fontSize={"lg"} fontStyle={'san-serif'} classes="font-normal">{jobTitle}</Heading>
                             </div>
                         }
 
-                        <div className="flex justify-center">
-                            <div className="w-[60%]">
-                                <ProfileImage image={{src: profileImage?.src}} mobileOnly={true} />                   
-                            </div>
-                        </div>
- 
                         {links &&
                             <ul className="list-none flex flex-col gap-y-5">
                                 {links?.map((link) => {
@@ -144,8 +139,10 @@ export const Overview = ({
                 </div>
                 <div className="col-span-12 md:col-span-4 lg:col-span-5">
                     <div className="flex flex-col justify-center md:justify-end w-full">
-                                                
-                        <ProfileImage image={{src: profileImage?.src}} />                   
+
+                        <div className="hidden md:block">                                                
+                            <ProfileImage image={{src: profileImage?.src, alt: "peter aiello profile pic desktop"}}  />                   
+                        </div>
  
                         {Boolean(skillGroups?.length > 0) &&
                             <div className="flex flex-col gap-sm md:gap-md lg:gap-[60px] mt-sm md:mt-md">

@@ -1,12 +1,11 @@
 import React, {useContext} from "react"
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
-import { CustomImage } from "../image/image";
+import { CustomImage, customImageProps } from "../image/image";
 
 interface ProfileImageProps {
     mobileOnly?: boolean,
-    image: {
-        src?: string
-    }
+    image?: customImageProps
+  
 }
 
 export const ProfileImage = ({
@@ -23,7 +22,7 @@ export const ProfileImage = ({
 
             {image.src &&
                 <div className="absolute w-full h-[122%] scale-[60%]">
-                    <CustomImage src={image.src} fit={'cover'} />
+                    <CustomImage src={image.src} alt={image?.alt} fit={'cover'} />
                 </div>
             }
 

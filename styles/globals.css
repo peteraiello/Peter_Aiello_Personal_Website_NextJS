@@ -37,19 +37,6 @@
 }
 
 @layer components {
-/* 
-    .profile-image-wrapper {
-        clip-path: rect(5px 330px 660px 5px round 20%);
-    } */
-
-    .profile-image {
-        /* width: 360px;
-        height: 660px;
-        display: block; */
-        /* clip-path: rect(5px 145px 600px 5px round 20%); */
-        @apply bg-red-600; 
-    }
-
     .wrapper {
         @apply container mx-auto px-3 md:px-0;
     }
@@ -103,7 +90,7 @@
     }
 
     .profile-overview > .markdown-text p {
-        @apply mb-[20px] md:mb-[40px] lg:mb-[60px];
+        @apply mb-[20px] md:mb-[40px];
     }
 
     .profile-overview > .markdown-text p:last-of-type {
