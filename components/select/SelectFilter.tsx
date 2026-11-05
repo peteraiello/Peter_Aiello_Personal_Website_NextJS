@@ -45,10 +45,10 @@ export const SelectFilter = ({
     }
 
     return (
-        <div className="w-full md:w-1/5"> 
+        <div className="relative">
             <select 
                 aria-label={filterId + "-select"}
-                name={filterId} id={filterId} className="select-filter bg-transparent px-4 py-2 dark:text-white border border-darkGray dark:border-white w-full outline-none focus:ring-2 focus:ring-brandBlue focus:ring-opacity-50 dark:focus:ring-brandGold"
+                name={filterId} id={filterId} className="select-filter bg-transparent px-4 py-2 font-transducer text-brandRedLighter dark:text-brandBlueLighter border border-brandRedLighter dark:border-brandBlueLighter w-full outline-none focus:ring-2 focus:ring-brandRedLighter focus:ring-opacity-50 dark:focus:ring-brandBlueLighter"
                 onChange={(event) => changeHandler(event)} 
                 value={selectedFilter }
             >
@@ -63,6 +63,21 @@ export const SelectFilter = ({
                     })
                 }
             </select>
+            <svg
+                aria-hidden="true"
+                viewBox="0 0 10 6"
+                className={"pointer-events-none absolute right-3 top-1/2 h-3 w-3 -translate-y-1/2 text-brandRedLighter dark:text-brandBlueLighter"}
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M0.8 0.8L4.8 4.8L8.8 0.8"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
+            </svg>
         </div>
     )
 }

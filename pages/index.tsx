@@ -109,6 +109,21 @@ export default function Home({
                         }
                         skillGroups={exampleProfile.skillGroups}
                     />
+
+                    <Projects                         
+                        id={exampleProjectData?.id}
+                        title={exampleProjectData?.title}    
+                        projects={allProjects as any}
+                        setActiveProject={setActiveCard}
+                        filters={
+                            {
+                                skills: exampleProjectData?.filters?.skills,
+                                industries: exampleProjectData?.filters?.industries
+                            }
+                        }
+                    />  
+
+
                     {/*
                     <Projects                         
                         id={exampleProjectData?.id}

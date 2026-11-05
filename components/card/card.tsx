@@ -135,11 +135,11 @@ export const Card = ({
                         />
                     }
                     <div className="flex flex-col h-full p-5">
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-4">
                             <div className="title-wrapper flex flex-row gap-2 items-center">
                                 {title &&
                                     <Heading 
-                                        fontSize={"xl"} 
+                                        fontSize={"md"} 
                                         fontStyle={"san-serif"} 
                                         weight={"bold"}
                                         hTag={"3"}
@@ -169,7 +169,7 @@ export const Card = ({
                                         <Button 
                                             href={"#"}
                                             label={"Learn More"}
-                                            onClick={(event) => clickHandler(event)}                                            
+                                            onClick={(event) => clickHandler(event)}                                                                                        
                                         />
                                     </div>
                                 }

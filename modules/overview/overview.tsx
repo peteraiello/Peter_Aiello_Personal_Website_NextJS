@@ -73,8 +73,8 @@ export const Overview = ({
 }:OverviewProps) => { 
     return (
         <SectionWrapper id={id} theme={"overview"}>
-            <div className="grid gap-y-5 grid-cols-12">
-                <div className="col-span-12 lg:col-span-8 xl:col-span-7">
+            <div className="grid gap-sm grid-cols-12">
+                <div className="col-span-12 md:col-span-8 xl:col-span-7">
                     <div className="flex flex-col gap-[40px] md:gap-[60px] lg:gap-[80px]">
                         {profileImage?.src && 
                             <div className="flex items-center justify-center md:hidden">     
@@ -136,7 +136,7 @@ export const Overview = ({
                         }
                     </div>                 
                 </div>
-                <div className="col-span-12 lg:col-start-10 lg:col-span-3 xl:col-start-9 xl:col-span-4">
+                <div className="col-span-12 md:col-start-10 md:col-span-3 xl:col-start-9 xl:col-span-4">
                     <div className="flex flex-col justify-center md:justify-end w-full">
 
                         <div className="hidden md:block">                                                

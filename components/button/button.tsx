@@ -32,17 +32,15 @@ export const Button = ({
     onClick
 }: buttonProps) => {
 
-    const base = `drop-shadow-lg cursor button group bg-transparent px-5 py-2`;
+    const base = `drop-shadow-lg cursor button group px-5 py-2 bg-black dark:bg-white rounded-[10px]`;
 
-    const typography = `text-brandBlue dark:text-brandGold text-sm tracking-wide uppercase font-bold`;
+    const typography = `text-white dark:text-brandBlue text-sm tracking-wide font-bold font-transducer`;
     
-    const border = `ring-1 ring-brandBlue dark:ring-brandGold rounded-[10px]`;
-
-    const animationHover = `transition-all duration-300 ease-in-out hover:bg-brandBlue hover:text-white hover:dark:bg-brandGold hover:dark:text-darkGray`;
+    const animationHover = `transition-all duration-300 ease-in-out`;
     
     return (
         <div className="flex gap-3">
-            <Link href={href} onClick={onClick} className={cx(base, typography, border, animationHover)} target={icon === 'new-window' ? '_blank' : '_self'}>
+            <Link href={href} onClick={onClick} className={cx( base, typography, animationHover)} target={icon === 'new-window' ? '_blank' : '_self'}>
                 <div className="flex items-center gap-x-3">
                 {label}
                 {icon === 'download' &&

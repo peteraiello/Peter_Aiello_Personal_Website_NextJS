@@ -118,21 +118,26 @@ export const Projects = ({
 
                 <div className="flex flex-col gap-md">
                     {title &&
-                        <Heading hTag={"3"}>{title}</Heading>
+                        <Heading hTag={"3"} fontStyle={"san-serif"} weight={"bold"}>{title}</Heading>
                     }
-                    <div className="flex flex-col md:flex-row gap-sm">
-                        <SelectFilter 
-                            filterOptions={filters?.skills}
-                            filterId={"skills-filter"}
-                            selectedFilter={selectedSkillsFilter}
-                            setSelectedFilter={setSelectedSkillsFilter}
-                        />    
-                        <SelectFilter 
-                            filterOptions={filters?.industries}
-                            filterId={"industry-filter"}
-                            selectedFilter={selectedIndustryFilter}
-                            setSelectedFilter={setSelectedIndustryFilter}
-                        />                                            
+
+                    <div className="grid grid-cols-12 gap-sm">
+                        <div className="col-span-12 lg:col-span-3">                    
+                            <SelectFilter 
+                                filterOptions={filters?.skills}
+                                filterId={"skills-filter"}
+                                selectedFilter={selectedSkillsFilter}
+                                setSelectedFilter={setSelectedSkillsFilter}                            
+                            />    
+                        </div>
+                        <div className="col-span-12 lg:col-span-3">
+                            <SelectFilter 
+                                filterOptions={filters?.industries}
+                                filterId={"industry-filter"}
+                                selectedFilter={selectedIndustryFilter}
+                                setSelectedFilter={setSelectedIndustryFilter}
+                            />                                            
+                        </div>
                     </div>
 
                     {Boolean(filteredProjects?.length > 0 ) ?
