@@ -3,7 +3,7 @@ import { useRef } from "react";
 import {useInView} from 'framer-motion';
 import { TrackStraight } from "../icons/TrackStraight";
 import { Initials } from "../icons/Initials";
-
+import { ForwardSlash } from "../icons/forwardSlash";
 interface SectionWrapperProps {
     /**
      * Children of the react element
@@ -16,7 +16,7 @@ interface SectionWrapperProps {
     /**
      * Theme (i.e. overview)
      */
-    theme?: "overview"
+    theme?: "overview" | "portfolio"
 }
 
 export const SectionWrapper = ({
@@ -47,15 +47,28 @@ export const SectionWrapper = ({
 
             {theme === "overview" ?             
                 <div className="flex gap-[100px] mt-[50px] md:mt-[118px]">
-                    <div className="w-full md:w-[50%]">
+                    <div className="w-full md:w-[60%]">
                         <TrackStraight />
                     </div>
                     <div className="hidden md:block md:w-[40%]">
                         <Initials />
                     </div>
                 </div>
-            :
-            <></>
+            : theme === "portfolio" ?
+                <div className="flex gap-[100px] mt-[50px] md:mt-[118px] relative">
+                    <div className="w-full md:w-[60%] absolute right-0">
+                        <TrackStraight />
+                    </div>
+                    <div className="hidden md:block md:w-[40%] relative">
+                        <div className="absolute right-0">                        
+                            <div className="w-[125px] mr-[112px]">
+                                <ForwardSlash />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            : 
+                <></>
             }
 
         </section>

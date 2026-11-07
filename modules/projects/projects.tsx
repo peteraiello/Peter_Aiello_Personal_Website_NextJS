@@ -114,8 +114,7 @@ export const Projects = ({
     }, [])
 
     return (
-        <SectionWrapper id={id}>
-
+        <SectionWrapper id={id} theme={"portfolio"}>
                 <div className="flex flex-col gap-md">
                     {title &&
                         <Heading hTag={"3"} fontStyle={"san-serif"} weight={"bold"}>{title}</Heading>
