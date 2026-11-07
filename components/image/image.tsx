@@ -53,7 +53,7 @@ export const CustomImage = ({
     const getBorder = (border) => {
         let customClass;
         if(border === true) {
-            customClass = 'border-[1px] dark:border-brandGold border-brandBlue'
+            customClass = 'border-[1px] dark:border-brandBlueLighter border-brandRedLighter'
         } else {
             customClass = 'border-0';
         }

@@ -88,7 +88,8 @@ export default function Home({
                 <title>{'Peter Aiello | Full stack developer in Canada'}</title>                
             </Head>
 
-            <ThemeProvider>                
+            <ThemeProvider>        
+
                 <AppWrapper>                
                     
                     <Header items={navItems?.items} />
@@ -122,22 +123,19 @@ export default function Home({
                             }
                         }
                     />  
-
+                                           
+                    <ProjectModal             
+                        title={activeCard?.title}
+                        tags={activeCard?.tags}     
+                        projectIDs={projectIds}             
+                        thumbnailImage={activeCard?.thumbnail}
+                        featuredImage={activeCard?.featuredImage}
+                        content={activeCard?.content}
+                        buttonLink={activeCard?.buttonLink}
+                        gallery={activeCard?.gallery}
+                    />
 
                     {/*
-                    <Projects                         
-                        id={exampleProjectData?.id}
-                        title={exampleProjectData?.title}    
-                        projects={allProjects as any}
-                        setActiveProject={setActiveCard}
-                        filters={
-                            {
-                                skills: exampleProjectData?.filters?.skills,
-                                industries: exampleProjectData?.filters?.industries
-                            }
-                        }
-                    />  
-
                     <Articles
                         id={'blog'}
                         title={'Blog'}

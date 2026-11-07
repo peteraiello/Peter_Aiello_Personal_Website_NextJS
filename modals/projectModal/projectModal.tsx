@@ -160,7 +160,7 @@ export const ProjectModal = ({
                     </div>
                     <div className="project-modal-text__wrap flex flex-col gap-sm w-full md:w-1/2">
                         {title &&                        
-                            <Heading hTag={"2"} fontSize={"xl"} weight={"bold"} fontStyle={"san-serif"}>
+                            <Heading hTag={"3"} fontSize={"lg"} weight={"bold"} fontStyle={"san-serif"}>
                                 {title}
                             </Heading>
                         }
@@ -179,6 +179,7 @@ export const ProjectModal = ({
                                 <Button 
                                     href={buttonLink?.href}
                                     label={buttonLink?.label}   
+                                    border={true}
                                     icon={"new-window"}                              
                                 />    
                             </span>

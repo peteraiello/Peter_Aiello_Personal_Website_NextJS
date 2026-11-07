@@ -122,24 +122,27 @@ export const Projects = ({
                     }
 
                     <div className="grid grid-cols-12 gap-sm">
-                        <div className="col-span-12 lg:col-span-3">                    
-                            <SelectFilter 
-                                filterOptions={filters?.skills}
-                                filterId={"skills-filter"}
-                                selectedFilter={selectedSkillsFilter}
-                                setSelectedFilter={setSelectedSkillsFilter}                            
-                            />    
-                        </div>
-                        <div className="col-span-12 lg:col-span-3">
-                            <SelectFilter 
-                                filterOptions={filters?.industries}
-                                filterId={"industry-filter"}
-                                selectedFilter={selectedIndustryFilter}
-                                setSelectedFilter={setSelectedIndustryFilter}
-                            />                                            
-                        </div>
+                        {filters?.skills &&                
+                            <div className="col-span-12 lg:col-span-3">    
+                                    <SelectFilter 
+                                        filterOptions={filters?.skills}
+                                        filterId={"skills-filter"}
+                                        selectedFilter={selectedSkillsFilter}
+                                        setSelectedFilter={setSelectedSkillsFilter}                            
+                                    />                                
+                            </div>
+                        }
+                        {filters?.industries && 
+                            <div className="col-span-12 lg:col-span-3">
+                                <SelectFilter 
+                                    filterOptions={filters?.industries}
+                                    filterId={"industry-filter"}
+                                    selectedFilter={selectedIndustryFilter}
+                                    setSelectedFilter={setSelectedIndustryFilter}
+                                />                      
+                            </div>
+                        }     
                     </div>
-
                     {Boolean(filteredProjects?.length > 0 ) ?
                         <div className="flex flex-col md:grid md:grid-cols-12 gap-8">
                             {filteredProjects?.map((project, index) => { 
