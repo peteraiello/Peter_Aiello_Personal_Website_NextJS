@@ -61,11 +61,11 @@ export const Articles = ({
                     <div className="grid grid-cols-12 gap-sm">
                         {title &&
                             <div className="col-span-12">
-                                <Heading hTag={"3"}>{title}</Heading>
+                                <Heading fontStyle={"san-serif"} hTag={"3"} weight={"bold"}>{title}</Heading>
                             </div>
                         }
                         {subtitle &&
-                            <div className="col-span-12 lg:col-span-10">
+                            <div className="col-span-12 md:col-span-10 lg:col-span-6">
                                 <TextContent>{subtitle}</TextContent>
                             </div>
                         }

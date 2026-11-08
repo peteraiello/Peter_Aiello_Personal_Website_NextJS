@@ -78,8 +78,10 @@ export const BlogArticle = ({
                                 <div className='flex gap-x-5'>
                                     {featured &&
                                         <StarIcon />
-                                    }
-                                        <Heading hTag={"4"} fontSize={"xl"} fontStyle={"san-serif"} weight={"semibold"}>{title}</Heading>
+                                    }                                    
+                                        <Heading hTag={"4"} fontSize={"md"} fontStyle={"san-serif"} weight={"normal"} variant={"darker"}>
+                                            {title}
+                                        </Heading>
                                 </div>
                             }                           
                         </div>

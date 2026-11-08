@@ -29,7 +29,7 @@ export const ProfileLink = ({
     return (
         <li className="w-full">
             <a href={customLink?.href} target={customLink?.target} className={"flex flex-row items-center gap-[10px] group"}>
-                <div className={"icon-wrapper w-[40px] h-[40px]"}>
+                <div className={"icon-wrapper min-w-[40px] w-[40px] h-[40px]"}>
                     {preLabel === "WWW" ? 
                         <SiteIcon />
                     : preLabel === "EM" ?

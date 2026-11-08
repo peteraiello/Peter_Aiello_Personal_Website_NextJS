@@ -21,7 +21,7 @@ interface headingProps {
     /**
      * Variant
      */
-    variant?: "primary" | "lighter",
+    variant?: "primary" | "lighter" | "darker",
     /**
      * Classes (any additional classes you want to add)
      */
@@ -50,6 +50,9 @@ export const Heading = ({
             break;
             case 'lighter': 
                 fontColour = 'text-brandRedLighter dark:text-brandBlueLighter';
+            break;
+            case 'darker': 
+                fontColour = 'text-darkGray dark:text-brandBlueLighter';
             break;
             default:
                 fontColour = 'text-brandBlue';
@@ -82,15 +85,19 @@ export const Heading = ({
         let fontClass; 
         switch (fontSize) {
             case "xl": 
+                /* font size 72px */
                 fontClass = "text-[40px] md:text-[48px] lg:text-[72px]"
             break;
             case "lg": 
+                /* font size 48px */
                 fontClass = "text-[39px] md:text-[43px] lg:text-[48px]"
             break; 
             case "md": 
+                /* font size 24px */
                 fontClass = "text-[20px] md:text-[22px] lg:text-[24px]" 
             break; 
             case "sm": 
+                /* font size 20px */
                 fontClass = "text-[16px] md:text-[18px] lg:text-[20px]"
             break;
         }

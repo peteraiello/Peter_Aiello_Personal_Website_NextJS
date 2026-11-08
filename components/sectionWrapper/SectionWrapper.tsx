@@ -55,15 +55,13 @@ export const SectionWrapper = ({
                     </div>
                 </div>
             : theme === "portfolio" ?
-                <div className="flex gap-[100px] mt-[50px] md:mt-[118px] relative">
+                <div className="relative flex items-center gap-[100px] mt-[50px] md:mt-[118px] mb-[25px] md:mb-[59px] ">
                     <div className="w-full md:w-[60%] absolute right-0">
                         <TrackStraight />
                     </div>
-                    <div className="hidden md:block md:w-[40%] relative">
-                        <div className="absolute right-0">                        
-                            <div className="w-[125px] mr-[112px]">
-                                <ForwardSlash />
-                            </div>
+                    <div className="hidden md:flex md:justify-end md:w-[40%] absolute left-0">
+                        <div className="w-[125px] mr-[112px]">
+                            <ForwardSlash />
                         </div>
                     </div>
                 </div>

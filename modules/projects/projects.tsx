@@ -88,20 +88,20 @@ export const Projects = ({
             }
 
             /* Skill selected AND industry selected */
-            if((selectedSkillsFilter !== "skills") && (selectedIndustryFilter !== "industry-sector")) {  
+            if((selectedSkillsFilter !== "technical-skills") && (selectedIndustryFilter !== "industry-sector")) {  
                 filteredByIndustry = filteredBySkills?.filter((project) => {return project?.industry?.toLowerCase() === selectedIndustryFilter});
                 const titles = filteredByIndustry?.map((project => project?.title));
                 setFilteredProjects(projects?.filter((project) => {return titles?.includes(project?.title)}))
             /* Skill NOT selected AND industry selected */
-            } else if((selectedSkillsFilter === "skills") && (selectedIndustryFilter !== "industry-sector")) {
+            } else if((selectedSkillsFilter === "technical-skills") && (selectedIndustryFilter !== "industry-sector")) {
                 filteredByIndustry = projects?.filter((project) => {return project?.industry?.toLowerCase() === selectedIndustryFilter})
                 setFilteredProjects(filteredByIndustry);
             /* Skill selected AND industry NOT selected */
-            } else if((selectedSkillsFilter !== "skills") && (selectedIndustryFilter === "industry-sector")) {
+            } else if((selectedSkillsFilter !== "technical-skills") && (selectedIndustryFilter === "industry-sector")) {
                 const titles = filteredBySkills?.map((project => project?.title));
                 setFilteredProjects(projects?.filter((project) => {return titles?.includes(project?.title)}))                        
             /* Skill NOT selected AND industry NOT selected */
-            } else if (selectedSkillsFilter === "skills" && selectedIndustryFilter === "industry-sector") {
+            } else if (selectedSkillsFilter === "technical-skills" && selectedIndustryFilter === "industry-sector") {
                 setFilteredProjects(projects);
             }
         }
@@ -119,10 +119,9 @@ export const Projects = ({
                     {title &&
                         <Heading hTag={"3"} fontStyle={"san-serif"} weight={"bold"}>{title}</Heading>
                     }
-
                     <div className="grid grid-cols-12 gap-sm">
                         {filters?.skills &&                
-                            <div className="col-span-12 lg:col-span-3">    
+                            <div className="col-span-12 md:col-span-6 lg:col-span-3">    
                                     <SelectFilter 
                                         filterOptions={filters?.skills}
                                         filterId={"skills-filter"}
@@ -132,7 +131,7 @@ export const Projects = ({
                             </div>
                         }
                         {filters?.industries && 
-                            <div className="col-span-12 lg:col-span-3">
+                            <div className="col-span-12 md:col-span-6 lg:col-span-3">
                                 <SelectFilter 
                                     filterOptions={filters?.industries}
                                     filterId={"industry-filter"}

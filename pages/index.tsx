@@ -2,17 +2,12 @@ import {Header} from '../modules/header';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, {useEffect, useState, useContext} from "react";
-import {Articles} from '../modules/writing/articles';
 import navItems from '../data/navItems.json';
 import { Overview } from '../modules/overview/overview';
 import { buttonIconType } from '../components/button';
 import { exampleProfile } from '../content/overview-content';
 import { Projects } from '../modules/projects/projects';
 import { exampleProjectData } from '../modules/projects/project-data';
-import { Experience } from '../modules/experience/experience';
-import { ExperienceData } from '../content/experience-content';
-import { FooterData } from '../modules/footer/footer-data';
-import { Footer } from '../modules/footer/footer';
 import { getLatestExternalBlogPosts, getLatestPersonalBlogPosts } from './api/blog';
 import { getAllProjects } from './api/projects';
 import { ArticleProps } from '../modules/writing/article';
@@ -21,6 +16,7 @@ import { ThemeProvider} from '../context/ThemeProvider';
 import { ProjectModal } from '../modals/projectModal/projectModal';
 import { CardProps } from '../components/card/card';
 import { idProps } from '../types';
+import { Articles } from '../modules/writing/articles';
 
 interface IndexProps {
     latestPersonalBlog: ArticleProps[]
@@ -134,8 +130,7 @@ export default function Home({
                         buttonLink={activeCard?.buttonLink}
                         gallery={activeCard?.gallery}
                     />
-
-                    {/*
+                    
                     <Articles
                         id={'blog'}
                         title={'Blog'}
@@ -144,6 +139,7 @@ export default function Home({
                         noPublishedPostsMsg={'Coming soon'}                       
                     />    
 
+                    {/*
                     <Experience 
                         id={ExperienceData.id}
                         title={ExperienceData.title}
