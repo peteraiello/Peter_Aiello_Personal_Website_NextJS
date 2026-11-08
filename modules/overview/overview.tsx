@@ -88,9 +88,9 @@ export const Overview = ({
                                 <span className="min-w-6 md:w-[55px]">
                                     <GreaterThanIcon />
                                 </span>
-                                    {name &&                                         
-                                        <Heading hTag={"1"} fontStyle={"san-serif"} fontSize={"xl"} weight={"bold"} classes={"main-name-heading"}>{name}</Heading>
-                                    }
+                                {name &&                                         
+                                    <Heading hTag={"1"} fontStyle={"san-serif"} fontSize={"xl"} weight={"bold"} classes={"main-name-heading"}>{name}</Heading>
+                                }
                                 <span className="min-w-6 md:w-[55px]">
                                     <LessThanIcon />
                                 </span>
