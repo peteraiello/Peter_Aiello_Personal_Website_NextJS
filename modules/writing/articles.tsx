@@ -55,7 +55,7 @@ export const Articles = ({
     const publicPosts = articles?.filter((post) => {return post?.draft !== true });
 
     return (
-        <SectionWrapper id={id}>
+        <SectionWrapper id={id} theme={"blog"}>
             <div className="flex flex-col gap-md">
                 <div className="flex flex-col">
                     <div className="grid grid-cols-12 gap-sm">

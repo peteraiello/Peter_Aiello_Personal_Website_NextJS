@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import cx from 'classnames';
 
-export type imageSize = 'project' | 'square' | 'profile' | 'portrait';
-
+export type imageSize = 'project' | 'square' | 'profile' | 'portrait' | 'gradient';
+ 
 export interface customImageProps {
     /**
      * Alt Text
@@ -32,7 +32,7 @@ export interface customImageProps {
     /**
      * Size
      */
-    size?: 'project' | 'square' | 'profile' | 'portrait',
+    size?: 'project' | 'square' | 'profile' | 'portrait' | 'gradient',
     /**
      * Object fit
      */

@@ -59,7 +59,7 @@ export const Header = ({items}:HeaderProps) => {
                         <div className="flex items-center">
                             {
                                 (items && items.length > 0) &&
-                                <ul className="hidden md:flex mr-10 gap-10 font-open font-medium">
+                                <ul className="hidden md:flex mr-10 gap-10 font-transducer font-normal">
                                     {items?.map((item, index) => {
                                         return (
                                             <li key={index}><Link href={item?.href}>{item?.label}</Link></li>

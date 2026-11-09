@@ -1,9 +1,17 @@
-import React from "react";
+import React, {useContext} from "react";
 import { useRef } from "react";
 import {useInView} from 'framer-motion';
 import { TrackStraight } from "../icons/TrackStraight";
+import { ArticlesTrack } from "../icons/article-track";
 import { Initials } from "../icons/Initials";
 import { ForwardSlash } from "../icons/forwardSlash";
+import { CustomImage } from "../image/image";
+import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
+
+import ArticleGradientBlue from "../../public/images/gradients/gradient-blue.png";
+import ArticleGradientRed from "../../public/images/gradients/gradient-red.png";
+
+
 interface SectionWrapperProps {
     /**
      * Children of the react element
@@ -16,7 +24,7 @@ interface SectionWrapperProps {
     /**
      * Theme (i.e. overview)
      */
-    theme?: "overview" | "portfolio"
+    theme?: "overview" | "portfolio" | "blog"
 }
 
 export const SectionWrapper = ({
@@ -30,6 +38,9 @@ export const SectionWrapper = ({
     const isInView = useInView(ref, 
         { once: false }
     );  
+
+
+    const {darkThemeActive} = useContext(ThemeContext);
 
     return(
         <section 
@@ -62,6 +73,21 @@ export const SectionWrapper = ({
                     <div className="hidden md:flex md:justify-end md:w-[40%] absolute left-0">
                         <div className="w-[125px] mr-[112px]">
                             <ForwardSlash />
+                        </div>
+                    </div>
+                </div>
+            : theme === "blog" ?
+                <div className="wrapper max-w-[1400px]">
+                    <div className="mt-[60px]">
+                        <div className="grid grid-cols-12">
+                            <div className="col-start-5 col-span-8 relative">
+                                <div className="w-full h-full absolute">
+                                    <CustomImage src={ darkThemeActive ? ArticleGradientBlue.src : ArticleGradientRed?.src} alt={"dark theme pattern"} size={"gradient"} />
+                                </div>
+                                <div className="relative w-full h-full z-10">       
+                                    <ArticlesTrack />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
