@@ -6,7 +6,7 @@ export const Initials = () => {
     const {darkThemeActive} = useContext(ThemeContext);
 
     return (
-        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="198 163 246 100" className="w-[28%] scale-[150%]">
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="198 163 246 100">
             <g id="Layer_1-2" data-name="Layer 1">
                 <g>      
                     <g>

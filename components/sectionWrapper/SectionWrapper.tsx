@@ -4,13 +4,15 @@ import {useInView} from 'framer-motion';
 import { TrackStraight } from "../icons/TrackStraight";
 import { ArticlesTrack } from "../icons/article-track";
 import { Initials } from "../icons/Initials";
+import InitialsGradient from "../../public/images/gradients/initials-gradient.png";
+import InitialsGradientDarkBg from "../../public/images/gradients/initials-gradient-dark.png";
 import { ForwardSlash } from "../icons/forwardSlash";
 import { CustomImage } from "../image/image";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
 
 import ArticleGradientBlue from "../../public/images/gradients/gradient-blue.png";
 import ArticleGradientRed from "../../public/images/gradients/gradient-red.png";
-
+import Image from "next/image";
 
 interface SectionWrapperProps {
     /**
@@ -56,15 +58,20 @@ export const SectionWrapper = ({
             <div className="translate-x-[60%]">
             </div>
 
-            {theme === "overview" ?             
-                <div className="flex gap-[100px] mt-[50px] md:mt-[118px]">
-                    <div className="w-full md:w-[60%]">
-                        <TrackStraight />
+            {theme === "overview" ?    
+                <>                     
+                    <div className="flex items-center gap-[100px] mt-[50px] md:mt-[118px]">
+                        <div className="w-full md:w-[60%] z-10 relative block">
+                            <TrackStraight />
+                        </div>
+                        <div className="hidden md:flex items-center md:w-[40%] relative">
+                            <Image quality={100} className="absolute scale-[300%] z-[-1]" width={200} height={200} objectFit="cover" src={!darkThemeActive ? InitialsGradient?.src : InitialsGradientDarkBg?.src} alt={"Initials gradient"} />                                
+                            <div className="relative w-[50%]">
+                                <Initials />
+                            </div>
+                        </div>
                     </div>
-                    <div className="hidden md:block md:w-[40%]">
-                        <Initials />
-                    </div>
-                </div>
+                </>
             : theme === "portfolio" ?
                 <div className="relative flex items-center gap-[100px] mt-[50px] md:mt-[118px] mb-[25px] md:mb-[59px] ">
                     <div className="w-full md:w-[60%] absolute right-0">

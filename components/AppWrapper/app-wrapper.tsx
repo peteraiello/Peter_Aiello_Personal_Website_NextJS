@@ -15,7 +15,7 @@ export const AppWrapper = ({children}) => {
     }
 
     return (
-        <div className={darkThemeActive === true ? 'dark bg-darkGray' : '' } 
+        <div className={darkThemeActive === true ? 'dark bg-darkGray' : 'bg-[#F8F8F8]' } 
             onKeyDown={(e) => onKeyPressed(e)} tabIndex={0}
         >
             <GradientWrapper>
@@ -23,14 +23,8 @@ export const AppWrapper = ({children}) => {
                     <>
                         <Gradient fromColour={'darkerGray'} toColour={'black'} gradientDirection={'top-to-bottom'} opacity={'1/4'} zIndex="-z-[1]"/>
                         <Gradient fromColour={'darkGray'} toColour={'brandGold'} gradientDirection={'left-to-right'} opacity={'1/4'} zIndex="-z-[1]"/>   
-                    </>
-                }
-                {darkThemeActive !== true &&
-                    <>
-                        <Gradient fromColour={'lightGray'} toColour={'white'} gradientDirection={'top-to-bottom'} opacity={'full'} zIndex="-z-[1]"/>
-                        <Gradient fromColour={'white'} toColour={'brandBlue'} gradientDirection={'left-to-right'} opacity={'1/4'} zIndex="-z-[1]"/>
-                    </>
-                }
+                    </>                    
+                }             
 
             {children}
             </GradientWrapper>
