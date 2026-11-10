@@ -1,5 +1,5 @@
 export const ExperienceData = { 
-    title: 'Previous Experience',
+    title: 'Experience',
     id: 'experience',
     experience: [
         {

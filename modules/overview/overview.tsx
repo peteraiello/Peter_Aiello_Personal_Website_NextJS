@@ -86,7 +86,8 @@ export const Overview = ({
                     <div className="flex flex-col gap-[40px] md:gap-[60px] lg:gap-[80px]">
                         {profileImage?.src && 
                             <div className="flex items-center justify-center md:hidden">     
-                                <div className="w-[60%]">
+                                <div className="w-[60%] relative">
+                                    <Image className="absolute w-full h-full scale-150 z-[-1]" quality={100} width={640} height={966} src={ !darkThemeActive ? profilePicGradient.src : profilePicGradientDrk.src } alt={"Profile pic gradient"} />
                                     <ProfileImage image={{src: profileImage?.src, alt: "peter aiello profile pic mobile"}} />                   
                                 </div>
                             </div>
@@ -148,7 +149,7 @@ export const Overview = ({
                     <div className="flex flex-col justify-center md:justify-end w-full">
 
                         <div className="hidden md:block relative">                                                
-                            <Image className="absolute w-full h-full scale-150" quality={100} width={640} height={966} src={ !darkThemeActive ? profilePicGradient.src : profilePicGradientDrk.src } alt={"Profile pic gradient"} />
+                            <Image className="absolute w-full h-full scale-150 z-[-1]" quality={100} width={640} height={966} src={ !darkThemeActive ? profilePicGradient.src : profilePicGradientDrk.src } alt={"Profile pic gradient"} />
                             <ProfileImage image={{src: profileImage?.src, alt: "peter aiello profile pic desktop"}}  />                   
                         </div>
  

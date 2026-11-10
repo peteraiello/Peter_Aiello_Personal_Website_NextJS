@@ -46,12 +46,12 @@ export const Experience = ({
     experiences
 }:ExperienceProps) => {
     return(
-        <SectionWrapper id={id}>
+        <SectionWrapper id={id} theme={"experience"}>
             <div className="grid grid-cols-12">
                 {title &&
                     <div className="col-span-12">
                         <div className="flex flex-col gap-6 md:gap-8 lg:gap-[60px]">
-                            <Heading hTag={'4'}>
+                            <Heading hTag={'4'} weight={"bold"} fontStyle={"san-serif"}>
                                 {title}
                             </Heading>
 
@@ -62,16 +62,18 @@ export const Experience = ({
                                         return(
                                             <AnimatedElement index={index} key={id} speed={"medium"}>
                                                 <div className="grid grid-cols-12">
-                                                    <div className="col-span-12 lg:col-span-4 flex flex-col gap-[0px]">
+                                                    <div className="col-span-12 lg:col-span-4 flex flex-col gap-sm">
                                                         {experience.company &&
-                                                            <Text weight={'bold'} size={'project-title'}>{experience.company}</Text>
+                                                            <Heading weight={'bold'} fontStyle={"san-serif"} fontSize={"md"}>{experience.company}</Heading>
                                                         }
-                                                        {experience.position &&
-                                                            <Text weight={'bold'} size={'project-title'}>{experience.position}</Text>
-                                                        }
-                                                        {experience.date &&
-                                                            <Text weight={'bold'} size={'project-title'}>{experience.date}</Text>
-                                                        }
+                                                        <div className="flex flex-col">
+                                                            {experience.position &&
+                                                                <Heading variant={"lighter"} fontStyle={"san-serif"} weight={'normal'} fontSize={'sm'}>{experience.position}</Heading>
+                                                            }
+                                                            {experience.date &&
+                                                                <Heading variant={"lighter"} fontStyle={"san-serif"} weight={'normal'} fontSize={'sm'}>{experience.date}</Heading>
+                                                            }
+                                                        </div>
                                                     </div>
                                                     <div className="col-span-12 lg:col-span-8">
                                                         <TextContent>{experience.description}</TextContent>

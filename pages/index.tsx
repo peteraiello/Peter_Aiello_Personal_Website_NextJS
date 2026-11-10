@@ -17,6 +17,10 @@ import { ProjectModal } from '../modals/projectModal/projectModal';
 import { CardProps } from '../components/card/card';
 import { idProps } from '../types';
 import { Articles } from '../modules/writing/articles';
+import { Experience } from '../modules/experience/experience';
+import { ExperienceData } from '../content/experience-content';
+import { Footer } from '../modules/footer/footer';
+import { FooterData } from '../modules/footer/footer-data';
 
 interface IndexProps {
     latestPersonalBlog: ArticleProps[]
@@ -138,27 +142,17 @@ export default function Home({
                         articles={latestPersonalBlog}     
                         noPublishedPostsMsg={'Coming soon'}                       
                     />    
-
-                    {/*
+                    
                     <Experience 
                         id={ExperienceData.id}
                         title={ExperienceData.title}
                         experiences={ExperienceData.experience}
                     />
+                    
                     <Footer 
                         footerText={FooterData}
                     />                           
-                    <ProjectModal             
-                        title={activeCard?.title}
-                        tags={activeCard?.tags}     
-                        projectIDs={projectIds}             
-                        thumbnailImage={activeCard?.thumbnail}
-                        featuredImage={activeCard?.featuredImage}
-                        content={activeCard?.content}
-                        buttonLink={activeCard?.buttonLink}
-                        gallery={activeCard?.gallery}
-                    />
-                */}
+            
                 </AppWrapper>
             </ThemeProvider>         
         </>
