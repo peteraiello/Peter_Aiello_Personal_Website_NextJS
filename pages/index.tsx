@@ -21,6 +21,7 @@ import { Experience } from '../modules/experience/experience';
 import { ExperienceData } from '../content/experience-content';
 import { Footer } from '../modules/footer/footer';
 import { FooterData } from '../modules/footer/footer-data';
+import { Form } from "../modules/form/form";
 
 interface IndexProps {
     latestPersonalBlog: ArticleProps[]
@@ -149,6 +150,8 @@ export default function Home({
                         experiences={ExperienceData.experience}
                     />
                     
+                    <Form />
+
                     <Footer 
                         footerText={FooterData}
                     />                           

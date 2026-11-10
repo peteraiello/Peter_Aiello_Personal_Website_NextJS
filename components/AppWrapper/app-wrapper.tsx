@@ -8,7 +8,9 @@ export const AppWrapper = ({children}) => {
     const {darkThemeActive, toggleModal} = useContext(ThemeContext);
 
     const onKeyPressed = (e) => {
-        e.preventDefault();
+        /* e.preventDefault() commented out for now, 
+            because interfers with HTML form inputs */
+        // e.preventDefault();
         if(e.code === "Escape" || e.key === "Escape" || e.keyCode === 27) {
             toggleModal();
         }

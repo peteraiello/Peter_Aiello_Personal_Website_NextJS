@@ -64,14 +64,14 @@ export const Experience = ({
                                                 <div className="grid grid-cols-12">
                                                     <div className="col-span-12 lg:col-span-4 flex flex-col gap-sm">
                                                         {experience.company &&
-                                                            <Heading weight={'bold'} fontStyle={"san-serif"} fontSize={"md"}>{experience.company}</Heading>
+                                                            <Heading hTag={"4"} weight={'bold'} fontStyle={"san-serif"} fontSize={"md"}>{experience.company}</Heading>
                                                         }
                                                         <div className="flex flex-col">
                                                             {experience.position &&
-                                                                <Heading variant={"lighter"} fontStyle={"san-serif"} weight={'normal'} fontSize={'sm'}>{experience.position}</Heading>
+                                                                <Heading hTag={"5"} variant={"lighter"} fontStyle={"san-serif"} weight={'normal'} fontSize={'sm'}>{experience.position}</Heading>
                                                             }
                                                             {experience.date &&
-                                                                <Heading variant={"lighter"} fontStyle={"san-serif"} weight={'normal'} fontSize={'sm'}>{experience.date}</Heading>
+                                                                <Heading hTag={"5"} variant={"lighter"} fontStyle={"san-serif"} weight={'normal'} fontSize={'sm'}>{experience.date}</Heading>
                                                             }
                                                         </div>
                                                     </div>

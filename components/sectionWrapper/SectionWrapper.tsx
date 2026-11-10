@@ -65,7 +65,7 @@ export const SectionWrapper = ({
                         <TrackStraight />
                     </div>
                     <div className="hidden md:flex items-center md:w-[40%] relative">
-                        <Image quality={100} className="absolute left-[-25%] z-[-1]" width={640} height={424} objectFit="cover" src={!darkThemeActive ? InitialsGradient?.src : InitialsGradientDarkBg?.src} alt={"Initials gradient"} />                                
+                        <Image quality={100} className="absolute left-[-25%] z-[-1]" width={640} height={424} src={!darkThemeActive ? InitialsGradient?.src : InitialsGradientDarkBg?.src} alt={"Initials gradient"} />                                
                         <div className="relative w-[50%]">
                             <Initials />
                         </div>

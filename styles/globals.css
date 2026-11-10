@@ -48,6 +48,7 @@
 }
 
 @layer components {
+
     .wrapper {
         @apply container mx-auto px-3 md:px-0;
     }
@@ -168,7 +169,7 @@
     }
 
     .footer-text {
-        @apply prose-p:m-0;
+        @apply prose-p:m-0 prose-a:text-brandRed dark:prose-a:text-brandBlue;
     }
 
     select.select-filter {
@@ -201,4 +202,19 @@
         @apply dark:text-darkGray !important;
     }
 
+    form {
+        @apply z-50 border-[3px] pb-20 dark:border-brandBlue border-brandRed rounded-[20px] p-5 flex flex-col gap-5;
+    }
+
+    form label {
+        @apply font-transducer font-bold dark:text-brandBlue text-brandRed;
+    }
+
+    form textarea {
+        @apply dark:text-white bg-transparent border rounded-lg dark:border-brandBlue border-brandRed placeholder:font-carbon focus:ring-brandRed dark:focus:ring-brandBlue font-carbon text-[16px];
+    }
+
+    form input {
+        @apply dark:text-white bg-transparent rounded-lg dark:border-brandBlue border-brandRed placeholder:font-carbon focus:ring-brandRed dark:focus:ring-brandBlue text-[16px] font-carbon;
+    }    
 } 

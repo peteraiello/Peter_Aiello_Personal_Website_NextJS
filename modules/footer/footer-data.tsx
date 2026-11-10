@@ -1,2 +1,1 @@
-export const FooterData = `Site designed in Figma. Developed with [Next JS](https://nextjs.org) and [Tailwind CSS](#) using [Visual Studio Code](#). Deployed on [Vercel](#). Just like everyone else. 
-`
+export const FooterData = `Branding by [Jamila Y. Akhtar](#). Site designed in [Adobe Illustrator](#) and [Figma](#). Developed with [Next JS](#) and [Tailwind CSS](#) using [Visual Studio Code](#). Deployed on [Vercel](#). Not quite like everyone else.`
