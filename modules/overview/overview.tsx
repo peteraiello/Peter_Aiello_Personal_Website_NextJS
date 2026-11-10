@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
+import Image from "next/image";
 import {Heading} from '../../components/typography/heading';
 import { SectionWrapper } from "../../components/sectionWrapper";
 import { ProfileLink, profileLinkProps } from "./profileLink";
@@ -6,11 +7,14 @@ import { v4 as uuidv4} from 'uuid';
 import { Button, buttonProps } from "../../components/button/button";
 import { TextContent } from "../../components/typography/textContent";
 import { Card, CardProps } from "../../components/card/card";
-import {  customImageProps } from "../../components/image/image";
+import {  CustomImage, customImageProps } from "../../components/image/image";
 import { Tags } from "../../components/tag/tags";
 import { GreaterThanIcon } from "../../components/icons/greater-than-icon";
 import { LessThanIcon } from "../../components/icons/less-than-icon";
 import { ProfileImage } from "../../components/ProfileImage/ProfileImage";
+import profilePicGradient from "../../public/images/gradients/profile-pic-gradient.png";
+import profilePicGradientDrk from "../../public/images/gradients/profile-pic-gradient-dark-theme.png";
+import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
 
 interface OverviewProps {
     /**
@@ -71,6 +75,10 @@ export const Overview = ({
     id,
     profileImage
 }:OverviewProps) => { 
+
+    const {darkThemeActive} = useContext(ThemeContext);
+
+
     return (
         <SectionWrapper id={id} theme={"overview"}>
             <div className="grid gap-sm grid-cols-12">
@@ -139,7 +147,8 @@ export const Overview = ({
                 <div className="col-span-12 md:col-start-10 md:col-span-3 xl:col-start-9 xl:col-span-4">
                     <div className="flex flex-col justify-center md:justify-end w-full">
 
-                        <div className="hidden md:block">                                                
+                        <div className="hidden md:block relative">                                                
+                            <Image className="absolute w-full h-full scale-150" quality={100} width={640} height={966} src={ !darkThemeActive ? profilePicGradient.src : profilePicGradientDrk.src } alt={"Profile pic gradient"} />
                             <ProfileImage image={{src: profileImage?.src, alt: "peter aiello profile pic desktop"}}  />                   
                         </div>
  

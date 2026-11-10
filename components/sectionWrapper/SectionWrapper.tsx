@@ -7,10 +7,9 @@ import { Initials } from "../icons/Initials";
 import InitialsGradient from "../../public/images/gradients/initials-gradient.png";
 import InitialsGradientDarkBg from "../../public/images/gradients/initials-gradient-dark.png";
 import { ForwardSlash } from "../icons/forwardSlash";
-import { CustomImage } from "../image/image";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
+import ArticleGradientBlue from "../../public/images/gradients/gradient-track-drk.png";
 
-import ArticleGradientBlue from "../../public/images/gradients/gradient-blue.png";
 import ArticleGradientRed from "../../public/images/gradients/gradient-red.png";
 import Image from "next/image";
 
@@ -65,7 +64,7 @@ export const SectionWrapper = ({
                             <TrackStraight />
                         </div>
                         <div className="hidden md:flex items-center md:w-[40%] relative">
-                            <Image quality={100} className="absolute scale-[300%] z-[-1]" width={200} height={200} objectFit="cover" src={!darkThemeActive ? InitialsGradient?.src : InitialsGradientDarkBg?.src} alt={"Initials gradient"} />                                
+                            <Image quality={100} className="absolute left-[-25%] z-[-1]" width={640} height={424} objectFit="cover" src={!darkThemeActive ? InitialsGradient?.src : InitialsGradientDarkBg?.src} alt={"Initials gradient"} />                                
                             <div className="relative w-[50%]">
                                 <Initials />
                             </div>
@@ -87,12 +86,14 @@ export const SectionWrapper = ({
                 <div className="wrapper max-w-[1400px]">
                     <div className="mt-[60px]">
                         <div className="grid grid-cols-12">
-                            <div className="col-start-5 col-span-8 relative">
-                                <div className="w-full h-full absolute">
-                                    <CustomImage src={ darkThemeActive ? ArticleGradientBlue.src : ArticleGradientRed?.src} alt={"dark theme pattern"} size={"gradient"} />
-                                </div>
-                                <div className="relative w-full h-full z-10">       
-                                    <ArticlesTrack />
+                            <div className="col-start-5 col-span-8">
+                                <div className="flex relative">
+                                    <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                                        <Image quality={100} className="scale-[300%]" width={200} height={200} src={ darkThemeActive ? ArticleGradientBlue.src : ArticleGradientRed?.src} alt={"dark theme pattern"} />
+                                    </div>
+                                    <div className="relative w-full h-full z-10">       
+                                        <ArticlesTrack />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +102,6 @@ export const SectionWrapper = ({
             : 
                 <></>
             }
-
         </section>
     )
 }
