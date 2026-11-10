@@ -108,10 +108,12 @@ export const SectionWrapper = ({
                     <div className="w-full md:w-[60%] z-10 relative block">
                         <TrackStraight />
                     </div>
-                    <div className="hidden md:flex items-center md:w-[40%] relative">
-                        <Image className="absolute top-[-20%] left-[-10%] z-[-1] scale-[150%]" quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} width={200} height={200} />
-                        <div className="relative w-[50%]">
-                            <Asterisk />
+                    <div className="hidden md:block md:w-[40%]">    
+                        <div className="relative flex items-center justify-start">
+                            <Image className="absolute z-[-1] scale-[200%]" quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} width={145} height={145} />
+                            <div className="relative w-full max-w-[145px]">
+                                <Asterisk />
+                            </div>
                         </div>
                     </div>
                 </div>
