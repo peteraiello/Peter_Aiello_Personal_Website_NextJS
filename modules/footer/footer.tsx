@@ -1,9 +1,6 @@
-import React, {useContext} from "react";
+import React from "react";
 import { TextContent } from "../../components/typography/textContent";
 import { FooterLogo } from "../../components/icons/footer-logo";
-import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
-
-
 
 interface FooterProps {
     /**
@@ -16,20 +13,23 @@ export const Footer = ({
     footerText
 }:FooterProps) => {
 
-    const {darkThemeActive} = useContext(ThemeContext);
-
     return(
-        <footer>
-            <div className="wrapper max-w-[1200px] px-5 grid grid-cols-12 gap-4  py-[56px]">
-                <div className="col-span-12 md:col-span-8">
-                    {footerText &&
-                        <div className="markdown-text footer-text">
-                            <TextContent isProject={true}>{footerText}</TextContent>
+        <footer className="pb-12">
+            <div className="wrapper max-w-[1200px] px-4">
+                <div className="grid gap-y-4 md:gap-y-0 grid-cols-12">
+                    <div className="col-span-12 md:col-span-2">
+                        <div className="flex justify-center md:block">
+                            <FooterLogo />
+                        </div>
+                    </div>
+                    {footerText &&                    
+                        <div className="col-span-12 md:col-start-6 md:col-span-6">
+                            <div className="markdown-text footer-text">
+                                <TextContent isProject={true}>{footerText}</TextContent>
+                            </div>
                         </div>
                     }
-                </div>
-                
-                <FooterLogo />
+                </div>                        
             </div>
         </footer>
     )
