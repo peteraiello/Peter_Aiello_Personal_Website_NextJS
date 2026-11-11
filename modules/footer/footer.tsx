@@ -23,7 +23,7 @@ export const Footer = ({
                         </div>
                     </div>
                     {footerText &&                    
-                        <div className="col-span-12 md:col-start-6 md:col-span-6">
+                        <div className="col-span-12 md:col-start-6 md:col-span-6 flex items-center">
                             <div className="markdown-text footer-text">
                                 <TextContent isProject={true}>{footerText}</TextContent>
                             </div>
