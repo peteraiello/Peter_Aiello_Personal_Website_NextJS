@@ -11,8 +11,9 @@ export const AppWrapper = ({children}) => {
         /* e.preventDefault() commented out for now, 
             because interfers with HTML form inputs */
         // e.preventDefault();
+        
         if(e.code === "Escape" || e.key === "Escape" || e.keyCode === 27) {
-            toggleModal();
+            toggleModal;
         }
     }
 
