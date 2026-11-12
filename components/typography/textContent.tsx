@@ -40,7 +40,7 @@ export const TextContent = ({
                         return <a {...props}>{children}</a>
                     }
                 }}                
-            >{children}</ReactMarkdown>
+            >{children ?? ""}</ReactMarkdown>
         </div>        
     )
 }

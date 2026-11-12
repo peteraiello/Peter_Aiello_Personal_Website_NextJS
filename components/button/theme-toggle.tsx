@@ -9,7 +9,7 @@ export const ThemeToggleButton = () => {
 
     const clickHandler = (e) => {
         e.preventDefault();
-        toggleDarkTheme();
+        toggleDarkTheme !== undefined && toggleDarkTheme();
     }
 
     return (

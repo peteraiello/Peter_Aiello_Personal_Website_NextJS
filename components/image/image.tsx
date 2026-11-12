@@ -128,8 +128,8 @@ export const CustomImage = ({
             {caption ?
                 <figure>
                     <Image 
-                        src={src}
-                        alt={alt}
+                        src={src ? src : ""}
+                        alt={alt ? alt : ""}
                         fill
                         className={
                             cx( 
@@ -149,8 +149,8 @@ export const CustomImage = ({
                 </figure>
                 :
                 <Image 
-                    src={src}
-                    alt={alt}
+                    src={src ? src : ""}
+                    alt={alt ? alt : ""}
                     fill
                     className={
                         cx(

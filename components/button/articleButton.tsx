@@ -30,11 +30,13 @@ export const ArticleButton = ({
     
     return (
         <div className="flex gap-3">
-            <Link href={href}  className={cx(base, typography, border, animationHover)}>
-                <div className="flex items-center gap-x-3">
-                     {label}
-                </div>
-            </Link>
+            {href &&
+                <Link href={href}  className={cx(base, typography, border, animationHover)}>
+                    <div className="flex items-center gap-x-3">
+                        {label}
+                    </div>
+                </Link>
+            }
         </div>
     )
 }

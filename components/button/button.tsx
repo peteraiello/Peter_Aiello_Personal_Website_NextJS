@@ -45,27 +45,29 @@ export const Button = ({
     
     return (
         <div className="flex gap-3">
-            <Link href={href} onClick={onClick} className={cx( 
-                base, 
-                typography, 
-                animationHover,
-                border && "border-2 dark:border-brandBlueLighter"
-            )} 
-                target={icon === 'new-window' ? '_blank' : '_self'}>
-                <div className="flex items-center gap-x-3">
-                {label}
-                {icon === 'download' &&
-                    <div className="h-[16px]">
-                        <DownloadIcon />
+            {href &&
+                <Link href={href} onClick={onClick} className={cx( 
+                    base, 
+                    typography, 
+                    animationHover,
+                    border && "border-2 dark:border-brandBlueLighter"
+                )} 
+                    target={icon === 'new-window' ? '_blank' : '_self'}>
+                    <div className="flex items-center gap-x-3">
+                    {label}
+                    {icon === 'download' &&
+                        <div className="h-[16px]">
+                            <DownloadIcon />
+                        </div>
+                    }
+                    {icon === 'new-window' &&
+                        <div className="h-[16px] hidden">
+                        <NewWindowIcon />
+                        </div>
+                    }
                     </div>
-                }
-                {icon === 'new-window' &&
-                    <div className="h-[16px] hidden">
-                       <NewWindowIcon />
-                    </div>
-                }
-                </div>
-            </Link>
+                </Link>
+            }
         </div>
     )
 }

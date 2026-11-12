@@ -117,7 +117,7 @@ export const Card = ({
                 gallery: gallery,
             }
         )            
-        toggleModal()
+        toggleModal !== undefined && toggleModal()
     }
 
     return (
@@ -151,7 +151,7 @@ export const Card = ({
                                     <StarIcon />
                                 }
                             </div>
-                            {Boolean(tags?.length > 0) && 
+                            {Boolean(tags && tags?.length > 0) && 
                                 <Tags tags={tags} />
                             }
                             {excerpt &&

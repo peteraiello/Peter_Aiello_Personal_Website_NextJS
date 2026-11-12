@@ -32,12 +32,15 @@ export const SelectFilter = ({
     filterId
 }:SelectFilterProps) => {    
 
-    const newOptions: selectFilterType[] = filterOptions?.map((option) => {
+    const newfilterOptions = filterOptions ? filterOptions.map((option) => {
         return {
             label: option, 
             value: formatTag(option)
         }
-    })
+    }) : []
+
+
+    const newOptions: selectFilterType[] = newfilterOptions;
 
     const changeHandler = (event) => {
         event.preventDefault();
