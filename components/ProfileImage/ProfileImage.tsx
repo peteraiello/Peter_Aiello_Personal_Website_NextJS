@@ -20,9 +20,9 @@ export const ProfileImage = ({
 
         <div className={`${mobileOnly ? "block md:hidden" : "flex items-center justify-center relative"}`}>
 
-            {image.src &&
+            {image?.src &&
                 <div className="absolute w-full h-[122%] scale-[60%]">
-                    <CustomImage src={image.src} alt={image?.alt} fit={'cover'} />
+                    <CustomImage src={image?.src} alt={image?.alt} fit={'cover'} />
                 </div>
             }
 
