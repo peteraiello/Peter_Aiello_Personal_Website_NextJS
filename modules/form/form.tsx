@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { Heading } from "../../components/typography/heading";
 import cx from "classnames";
+import { SectionWrapper } from "../../components/sectionWrapper";
 
 type statusType = "idle" | "sending" | "success" | "error";
 
@@ -61,7 +62,7 @@ export const Form = ({}:FormProps) => {
     }, [status])
     
     return(
-        <section id="website-form">
+        <SectionWrapper theme={"contact"} id="form">
             <div className="wrapper max-w-[1400px]">
                 <div className="grid grid-cols-12 gap-y-16">
                     <div className="col-span-12 md:col-start-2 col-end-12">
@@ -97,6 +98,6 @@ export const Form = ({}:FormProps) => {
                     </div>
                 </div>
             </div>
-        </section>
+        </SectionWrapper>
     )
 }

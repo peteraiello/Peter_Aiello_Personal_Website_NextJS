@@ -89,7 +89,7 @@ export const Overview = ({
                         {profileImage?.src && 
                             <div className="flex items-center justify-center md:hidden">     
                                 <div className="w-[60%] relative">
-                                    <Image className="absolute w-full h-full scale-150 z-[-1]" quality={100} width={640} height={966} src={ !darkThemeActive ? profilePicGradient.src : profilePicGradientDrk.src } alt={"Profile pic gradient"} />
+                                    <Image className="absolute w-full h-full scale-150" quality={100} width={640} height={966} src={ !darkThemeActive ? profilePicGradient.src : profilePicGradientDrk.src } alt={"Profile pic gradient"} />
                                     <ProfileImage image={{src: profileImage?.src, alt: "peter aiello profile pic mobile"}} />                   
                                 </div>
                             </div>
@@ -161,7 +161,7 @@ export const Overview = ({
                             <div className="flex flex-col gap-md lg:gap-[60px] mt-sm md:mt-md">
                                 {skillGroups?.map((group, index) => {   
                                     return (                 
-                                        <div key={index} className="flex flex-col gap-2">                               
+                                        <div key={index} className="flex flex-col gap-2 z-10">                               
                                             {Boolean(group?.skills) &&
                                                 <Tags title={group?.title} tags={group?.skills} />
                                             }
@@ -172,20 +172,7 @@ export const Overview = ({
                         }             
                     </div>
                 </div>
-            </div>           
-
-            {(cards && cards.length > 0) && 
-                <div className="flex flex-col md:flex-row gap-5 mt-sm md:mt-md lg:mt-lg">
-                    {(cards && cards.length > 0) && 
-                        cards?.map((card, i) => {
-                            let id = uuidv4();
-                            return(
-                                <Card { ...card } key={id} index={i}/>
-                            )
-                        })
-                    }
-                </div>    
-            }
+            </div>          
         </SectionWrapper>
     )
 }
