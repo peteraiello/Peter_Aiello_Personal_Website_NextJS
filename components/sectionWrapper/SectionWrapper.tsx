@@ -14,6 +14,7 @@ import PortfolioGradientDrk from "../../public/images/gradients/portfolio-gradie
 import PortfolioGradient from "../../public/images/gradients/portfolio-gradient.png";
 import Image from "next/image";
 import { Asterisk } from "../icons/asterisk";
+import cx from "classnames";
 
 interface SectionWrapperProps {
     /**
@@ -48,7 +49,7 @@ export const SectionWrapper = ({
     return(
         <section 
             ref={ref} id={id !== null ? id : undefined} 
-            className={` transition-all ease-in-out duration-500 text-darkGray dark:text-white ${isInView ? 'opacity-100 translate-y-0' : 'translate-y-10 opacity-0'}`}
+            className={cx(theme === "overview" ? "overflow-hidden" : " ", `transition-all ease-in-out duration-500 text-darkGray dark:text-white ${isInView ? 'opacity-100 translate-y-0' : 'translate-y-10 opacity-0'}`)}
         >
             {children &&
                 <div className="wrapper max-w-[1400px] px-5">

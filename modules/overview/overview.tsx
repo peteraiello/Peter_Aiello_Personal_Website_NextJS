@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, {useContext} from "react";
 import Image from "next/image";
 import {Heading} from '../../components/typography/heading';
 import { SectionWrapper } from "../../components/sectionWrapper";
@@ -15,6 +15,8 @@ import { ProfileImage } from "../../components/ProfileImage/ProfileImage";
 import profilePicGradient from "../../public/images/gradients/profile-pic-gradient.png";
 import profilePicGradientDrk from "../../public/images/gradients/profile-pic-gradient-dark-theme.png";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
+import { Typewriter } from "../../components/Typewriter/Typewriter";
+
 
 interface OverviewProps {
     /**
@@ -97,8 +99,10 @@ export const Overview = ({
                                 <span className="min-w-6 md:w-[55px]">
                                     <GreaterThanIcon />
                                 </span>
-                                {name &&                                         
-                                    <Heading hTag={"1"} fontStyle={"san-serif"} fontSize={"xl"} weight={"bold"} classes={"main-name-heading"}>{name}</Heading>
+                                {name &&
+                                    <span className="min-h-[60px] md:min-h-[72px] lg:min-h-[108px]">
+                                        <Typewriter text={name} />
+                                    </span>
                                 }
                                 <span className="min-w-6 md:w-[55px]">
                                     <LessThanIcon />
@@ -106,7 +110,7 @@ export const Overview = ({
                             </div>
                         }                                                        
                         {jobTitle && 
-                            <div className="lg:mb-lg w-full md:w-[80%] xl:w-full">
+                            <div className="lg:mb-lg w-full md:w-[80%] xl:w-full pl-0 lg:pl-10">
                                 <Heading variant={"lighter"} hTag="2" fontSize={"lg"} fontStyle={'san-serif'} classes="font-normal">{jobTitle}</Heading>
                             </div>
                         }
@@ -134,7 +138,7 @@ export const Overview = ({
                             </div>
                         }
 
-                        {resumeLink.label &&
+                        {resumeLink?.label &&
                             <div className="lg:mt-5">
                                 <Button 
                                     label={resumeLink?.label}
@@ -153,7 +157,7 @@ export const Overview = ({
                             <ProfileImage image={{src: profileImage?.src, alt: "peter aiello profile pic desktop"}}  />                   
                         </div>
  
-                        {Boolean(skillGroups?.length > 0) &&
+                        {skillGroups &&
                             <div className="flex flex-col gap-md lg:gap-[60px] mt-sm md:mt-md">
                                 {skillGroups?.map((group, index) => {   
                                     return (                 
