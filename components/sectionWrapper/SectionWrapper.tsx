@@ -59,7 +59,6 @@ export const SectionWrapper = ({
                 </div>
             }           
             {theme === "overview" ?    
-                <AnimatedElement >
                     <div className="flex items-center gap-x-[50px] md:gap-x-[100px] mt-[80px] md:mt-[118px]">
                         <div className="w-[60%] relative block z-[1]">
                             <TrackStraight />
@@ -71,9 +70,7 @@ export const SectionWrapper = ({
                             </div>
                         </div>
                     </div>
-                </AnimatedElement>
             : theme === "portfolio" ?
-                <AnimatedElement>
                     <div className="relative flex items-center gap-[100px] my-[118px] z-[-10] overflow-visible">
                         <div className="w-[60%] absolute right-0 z-[2]">
                             <TrackStraight />
@@ -85,9 +82,7 @@ export const SectionWrapper = ({
                             <Image width={750} height={750} className="absolute" quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} />
                         </div>
                     </div>
-                </AnimatedElement>
             : theme === "blog" ?
-                <AnimatedElement>
                     <div className="wrapper max-w-[1400px]">
                         <div className="my-[60px]">
                             <div className="grid grid-cols-12">
@@ -104,23 +99,20 @@ export const SectionWrapper = ({
                             </div>
                         </div>
                     </div>
-                </AnimatedElement>
             :theme === "experience" ?
-                <AnimatedElement>
-                    <div className="flex items-center gap-[50px] my-[50px] md:my-[118px] overflow-x-clip">
-                        <div className="w-[60%]">
-                            <TrackStraight />
-                        </div>
-                        <div className="w-[40%]">    
-                            <div className="relative flex items-center justify-center">
-                                <Image className="absolute scale-150 md:scale-100" width={750} height={750} quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} />
-                                <div className="relative w-[145px] scale-[80%] md:scale-100">
-                                    <Asterisk />
-                                </div>
+                <div className="flex items-center gap-[50px] my-[50px] md:my-[118px] overflow-x-clip">
+                    <div className="w-[60%]">
+                        <TrackStraight />
+                    </div>
+                    <div className="w-[40%]">    
+                        <div className="relative flex items-center justify-center">
+                            <Image className="absolute scale-150 md:scale-100" width={750} height={750} quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} />
+                            <div className="relative w-[145px] scale-[80%] md:scale-100">
+                                <Asterisk />
                             </div>
                         </div>
                     </div>
-                </AnimatedElement>            
+                </div>
             :
                 <>
                 </>
