@@ -89,7 +89,7 @@ export const Overview = ({
                         {profileImage?.src && 
                             <div className="flex items-center justify-center md:hidden">     
                                 <div className="w-[60%] relative">
-                                    <Image className="absolute w-full h-full scale-150" quality={100} width={640} height={966} src={ !darkThemeActive ? profilePicGradient.src : profilePicGradientDrk.src } alt={"Profile pic gradient"} />
+                                    <Image className="profile-pic-blur-mobile z-[-1] absolute w-full h-full scale-150" quality={100} width={640} height={966} src={ !darkThemeActive ? profilePicGradient.src : profilePicGradientDrk.src } alt={"Profile pic gradient"} />
                                     <ProfileImage image={{src: profileImage?.src, alt: "peter aiello profile pic mobile"}} />                   
                                 </div>
                             </div>
@@ -128,8 +128,7 @@ export const Overview = ({
                                     )
                                 })}
                             </ul>
-                        }
-                        
+                        }                        
                         {profileDesc && 
                             <div className="profile-overview w-full md:w-[80%]">
                                 <TextContent>
@@ -137,7 +136,6 @@ export const Overview = ({
                                 </TextContent>
                             </div>
                         }
-
                         {resumeLink?.label &&
                             <div className="lg:mt-5">
                                 <Button 
@@ -151,12 +149,10 @@ export const Overview = ({
                 </div>
                 <div className="col-span-12 md:col-start-10 md:col-span-3 xl:col-start-9 xl:col-span-4">
                     <div className="flex flex-col justify-center md:justify-end w-full">
-
-                        <div className="hidden md:block relative">                                                
-                            <Image className="absolute w-full h-full scale-150 z-[-1]" quality={100} width={640} height={966} src={ !darkThemeActive ? profilePicGradient.src : profilePicGradientDrk.src } alt={"Profile pic gradient"} />
+                        <div className="hidden md:block relative">                                                                        
+                            <Image className="profile-pic-blur-desktop z-[-1] absolute w-full h-full scale-150" quality={100} width={640} height={966} src={ !darkThemeActive ? profilePicGradient.src : profilePicGradientDrk.src } alt={"Profile pic gradient"} />
                             <ProfileImage image={{src: profileImage?.src, alt: "peter aiello profile pic desktop"}}  />                   
                         </div>
- 
                         {skillGroups &&
                             <div className="flex flex-col gap-md lg:gap-[60px] mt-sm md:mt-md">
                                 {skillGroups?.map((group, index) => {   

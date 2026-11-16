@@ -11,7 +11,7 @@ export const ForwardSlash = () => {
 
     return (
         <>
-            <svg width="125" height="145" viewBox="0 0 125 145" fill="none" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
+            <svg width="auto" height="auto" viewBox="0 0 125 145" fill="none" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
                 <rect width="125" height="145" fill="url(#pattern0_2291_967)"/>
                 <defs>
                     <pattern id="pattern0_2291_967" patternContentUnits="objectBoundingBox" width="1" height="1">

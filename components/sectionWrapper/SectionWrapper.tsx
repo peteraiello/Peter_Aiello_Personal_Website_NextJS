@@ -50,80 +50,77 @@ export const SectionWrapper = ({
         <>
         <section 
             ref={ref} id={id !== null ? id : undefined} 
-            className={cx(theme === "overview" ? "overflow-hidden" : " ", `z-[10] relative transition-all ease-in-out duration-500 text-darkGray dark:text-white ${isInView ? 'opacity-100 translate-y-0' : 'translate-y-10 opacity-0'}`)}
+            className={cx(theme === "overview" ? "overflow-x-clip overflow-y-visible" : " ", `relative transition-all ease-in-out duration-500 text-darkGray dark:text-white ${isInView ? 'opacity-100 translate-y-0' : 'translate-y-10 opacity-0'}`)}
         >
             {children &&
                 <div className="wrapper max-w-[1400px] px-5">
                     {children}
                 </div>
             }           
-        </section>
-         {theme === "overview" ?    
-            <div className="flex items-center gap-[100px] mb-[50px] md:mb-[118px]">
-                <div className="w-full md:w-[60%] z-10 relative block">
-                    <TrackStraight />
-                </div>
-                <div className="hidden md:flex items-center md:w-[40%] relative">
-                    <Image quality={100} className="absolute left-[-25%]" width={640} height={424} src={!darkThemeActive ? InitialsGradient?.src : InitialsGradientDarkBg?.src} alt={"Initials gradient"} />                                
-                    <div className="relative w-[50%]">
-                        <Initials />
+            {theme === "overview" ?    
+                <div className="flex items-center gap-x-[50px] md:gap-x-[100px] mt-[80px] md:mt-[118px]">
+                    <div className="w-[60%] relative block z-[1]">
+                        <TrackStraight />
+                    </div>
+                    <div className="flex items-center w-1/2 md:w-[40%] relative">
+                        <Image quality={100} className="absolute left-[-25%]" width={640} height={424} src={!darkThemeActive ? InitialsGradient?.src : InitialsGradientDarkBg?.src} alt={"Initials gradient"} />                                
+                        <div className="relative w-[50%]">
+                            <Initials />
+                        </div>
                     </div>
                 </div>
-            </div>
-        : theme === "portfolio" ?
-            <div className="relative flex items-center gap-[100px] my-[50px] md:my-[118px]">
-                <div className="w-full md:w-[60%] absolute right-0 z-[1]">
-                    <TrackStraight />
-                </div>
-                <div className="hidden md:flex md:justify-end md:w-[40%] absolute left-0">
-                    <div className="flex items-center justify-center relative">
-                        <div className="w-[125px] mr-[112px] z-[2]">
+            : theme === "portfolio" ?
+                <div className="relative flex items-center gap-[100px] my-[118px] z-[-10] overflow-visible">
+                    <div className="w-[60%] absolute right-0 z-[2]">
+                        <TrackStraight />
+                    </div>
+                    <div className="flex justify-center items-center w-[40%] absolute left-0">
+                        <div className="w-[100px] z-[1]">
                             <ForwardSlash />
                         </div>
-                        <Image className="absolute top-0 left-[-20%] scale-[200%]" quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} width={200} height={200} />
+                        <Image width={750} height={750} className="absolute" quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} />
                     </div>
-
                 </div>
-            </div>
-        : theme === "blog" ?
-            <div className="wrapper max-w-[1400px]">
-                <div className="my-[60px]">
-                    <div className="grid grid-cols-12">
-                        <div className="col-start-5 col-span-8">
-                            <div className="flex relative">
-                                <div className="flex absolute top-0 left-0 w-full h-full  items-center justify-center">
-                                    <Image quality={100} className="scale-100" fill={true} src={ darkThemeActive ? ArticleGradientBlue.src : ArticleGradientRed?.src} alt={"dark theme pattern"} />
-                                </div> 
-                                <div className="relative w-full h-full z-10">       
-                                    <ArticlesTrack />
+            : theme === "blog" ?
+                <div className="wrapper max-w-[1400px]">
+                    <div className="my-[60px]">
+                        <div className="grid grid-cols-12">
+                            <div className="col-start-5 col-span-8">
+                                <div className="flex relative">
+                                    <div className="flex absolute top-0 left-0 w-full h-full  items-center justify-center">
+                                        <Image quality={100} className="scale-100" fill={true} src={ darkThemeActive ? ArticleGradientBlue.src : ArticleGradientRed?.src} alt={"dark theme pattern"} />
+                                    </div> 
+                                    <div className="relative w-full h-full">       
+                                        <ArticlesTrack />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        :theme === "experience"  ?
-            <div className="flex items-center gap-[100px] my-[50px] md:my-[118px]">
-                <div className="w-full md:w-[60%] relative block">
-                    <TrackStraight />
-                </div>
-                <div className="hidden md:block md:w-[40%]">    
-                    <div className="relative flex items-center justify-start">
-                        <Image className="absolute scale-[200%]" quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} width={145} height={145} />
-                        <div className="relative w-full max-w-[145px]">
-                            <Asterisk />
+            :theme === "experience"  ?
+                <div className="flex items-center gap-[50px] my-[50px] md:my-[118px] overflow-x-clip">
+                    <div className="w-[60%]">
+                        <TrackStraight />
+                    </div>
+                    <div className="w-[40%]">    
+                        <div className="relative flex items-center justify-center">
+                            <Image className="absolute scale-150 md:scale-100" width={750} height={750} quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} />
+                            <div className="relative w-[145px] scale-[80%] md:scale-100">
+                                <Asterisk />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        : theme === "contact" ? 
-            <div className="mb-24">
-            
-            </div>
-        :
-            <>
-            </>
-        }
+            : theme === "contact" ? 
+                <div className="mb-24">
+                
+                </div>
+            :
+                <>
+                </>
+            }
+        </section>        
         </>
     )
 }
