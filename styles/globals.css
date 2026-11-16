@@ -171,6 +171,10 @@
     .footer-text {
         @apply prose-p:m-0 prose-a:text-brandRed dark:prose-a:text-brandBlue;
     }
+    
+    select {
+        background-image: none !important;
+    }
 
     select.select-filter {
         -webkit-appearance: none;
