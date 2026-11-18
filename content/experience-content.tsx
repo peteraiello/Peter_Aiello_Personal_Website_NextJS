@@ -3,6 +3,11 @@ export const ExperienceData = {
     id: 'experience',
     experience: [
         {
+            company: "Charities and non-profit's",
+            date: "Oct 2025 - Present",
+            description: "I moved to Canada in 2025, where I’ve been working for various charities and non-profits, with a variety of responsibilities (cooking, driving, etc.).",
+        },
+        {
             company: 'Frontend Developer',
             position: 'Dusted',
             date: 'Feb 2021 - Oct 2025',
