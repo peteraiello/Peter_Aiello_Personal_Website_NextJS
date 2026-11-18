@@ -1,6 +1,6 @@
 ---
 id: 'htb'
-status: 'published'
+status: 'draft'
 thumbnail: {
   src: '/images/projects/htb.jpg',
   alt: 'HTB Homepage'

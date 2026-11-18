@@ -1,6 +1,6 @@
 ---
 id: 'intralinks'
-status: 'published'
+status: 'draft'
 thumbnail: {
   src: '/images/projects/intralinks.jpg',
   alt: 'Intralinks Calculator Homepage'
