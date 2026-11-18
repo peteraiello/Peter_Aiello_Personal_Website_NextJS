@@ -14,8 +14,8 @@ title: 'Intralinks Calculator'
 industry: 'FinTech'
 featured: false
 tags: ["React", "Gatsby", "JavaScript", "Tailwind CSS"]
-excerpt: "A cost saving calculator for a FinTech giant."
-content: "I built an interactive cost-savings calculator for SS&C Intralinks, a global FinTech company specializing in document redaction and translation services. I translated Figma designs into a fully responsive Single Page Application using Gatsby and React, then integrated it into the client's Drupal website. The calculator became a key lead generation tool, promoted to their 100,000+ social media followers and helped quantify ROI for potential clients submitting enquiries. 
+excerpt: "A cost-saving calculator for a FinTech giant."
+content: "I built an interactive cost-savings calculator for SS&C Intralinks, a global FinTech company specializing in document redaction and translation services. I translated Figma designs into a fully responsive Single Page Application using Gatsby and React, then integrated it into the client’s Drupal website. The calculator became a key lead generation tool, promoted to their 100,000+ social media followers and helped quantify ROI for potential clients submitting enquiries. 
 "
 buttonLink: {
     label: "VIEW WEB APPLICATION",

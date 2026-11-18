@@ -51,7 +51,7 @@ industry: 'Investment'
 featured: false
 tags: ["React", "TypeScript", "Next", "GraphQL", "Tailwind CSS", "Storybook"]
 excerpt: "Headless architecture for a leading investment group."
-content: "I built the headless frontend for PIDG, an investment group delivering financial aid to developing countries. I collaborated with UX researchers and designers to translate elegant design systems from Figma into 30+ reusable modules using Storybook, React, TypeScript, and Next.js. I developed flexible layout patterns pulling data from WordPress via GraphQL queries, creating filterable case study pages, careers sections, and team directories. I optimized site performance to achieve scores of over 90% in Core Web Vitals, whilst making content editing easy for the marketing team."
+content: "I built the headless frontend for PIDG, an investment group delivering financial aid to developing countries. Working with UX researchers and designers, I translated Figma design systems into 30+ reusable modules with Storybook, React, TypeScript and Next.js. Flexible layouts pull data from WordPress via GraphQL, powering filterable case studies, careers sections and team directories. The site scored above 90 in multiple categories using Google Lighthouse, and the marketing team can easily edit content."
 buttonLink: {
     label: "VIEW WEBSITE",
     href: "https://www.pidg.org"
