@@ -1,1 +1,1 @@
-export const FooterData = `Branding by [Jamila Y. Akhtar](#). Site designed in [Adobe Illustrator](#) and [Figma](#). Developed with [Next JS](#) and [Tailwind CSS](#) using [Visual Studio Code](#). Deployed on [Vercel](#). Not quite like everyone else.`
+export const FooterData = `Branding by Jamila Y. Akhtar. Site designed in Adobe Illustrator and Figma. Developed with Next JS and Tailwind CSS using Visual Studio Code. Deployed on Vercel. Not quite like everyone else.`

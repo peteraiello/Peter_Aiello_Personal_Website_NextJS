@@ -105,7 +105,7 @@ export const SectionWrapper = ({
                     </div>
                     <div className="w-[40%]">    
                         <div className="relative flex items-center justify-center">
-                            <Image className="absolute scale-150 md:scale-100" width={750} height={750} quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} />
+                            <Image className="absolute scale-150 md:scale-100 z-[-10]" width={750} height={750} quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} />
                             <div className="relative w-[145px] scale-[80%] md:scale-100">
                                 <Asterisk />
                             </div>
