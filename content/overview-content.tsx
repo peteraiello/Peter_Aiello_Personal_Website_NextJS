@@ -12,9 +12,8 @@ export const exampleProfile = {
     profileImg: profileImg,
     profileDesc: 
         `<p>Hi, I’m Peter, a web developer from the UK, now living in Canada. I have nine years of web development experience, with nearly five specializing in frontend.</p>
-        <p>I’ve built websites and component libraries for clients in engineering, automotive (including electric vehicles), finance and charities, using modern headless stacks such as Next.js, TypeScript and Sanity. </p>
-        <p>My strength lies in my resilience to see complex projects through to completion. </p>
-        <p>Outside work, I’m an avid runner and have completed four marathons. </p>`,
+        <p>I’ve built websites and component libraries for clients in engineering, automotive (including electric vehicles), finance and charities, using modern headless stacks like Next.js, TypeScript and Sanity.</p>
+        <p>My strength lies in my resilience to see complex projects through to completion. Outside work, I’m an avid runner and have completed four marathons. </p>`,
     links: 
         [
             {preLabel: 'WWW', label: 'peteraiello.dev', customLink: {href: 'https://peteraiello.dev', target: "_blank"}},

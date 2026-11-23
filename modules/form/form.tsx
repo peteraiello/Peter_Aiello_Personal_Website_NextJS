@@ -6,10 +6,15 @@ import { SectionWrapper } from "../../components/sectionWrapper";
 type statusType = "idle" | "sending" | "success" | "error";
 
 interface FormProps {
-
+    /**
+     * The section ID
+     */
+    id?: string
 }
 
-export const Form = ({}:FormProps) => {
+export const Form = ({
+    id
+}:FormProps) => {
 
     const [messageStyles, setMessageStyles] = useState("");
 
