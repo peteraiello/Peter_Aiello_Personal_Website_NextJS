@@ -131,7 +131,7 @@ export const Projects = ({
                             </div>
                         }
                         {filters?.industries && 
-                            <div className="col-span-12 md:col-span-6 lg:col-span-3">
+                            <div className="col-span-12 md:col-span-6 lg:col-span-3 hidden">
                                 <SelectFilter 
                                     filterOptions={filters?.industries}
                                     filterId={"industry-filter"}
