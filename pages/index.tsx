@@ -41,6 +41,7 @@ export default function Home({
     const [activeCard, setActiveCard] = useState({
         status: "published",
         title: "",
+        agency: "",
         featuredImage: {
             src: "",
             alt: ""
@@ -64,6 +65,7 @@ export default function Home({
                 setActiveCard({
                     title: selectedProject?.title,
                     tags: selectedProject?.tags,
+                    agency: selectedProject?.agency,
                     featuredImage: selectedProject?.featuredImage,
                     thumbnail: selectedProject?.thumbnail,
                     content: selectedProject?.content,
@@ -118,6 +120,7 @@ export default function Home({
                                            
                     <ProjectModal             
                         title={activeCard?.title}
+                        agency={activeCard?.agency}
                         tags={activeCard?.tags}     
                         projectIDs={projectIds}             
                         thumbnailImage={activeCard?.thumbnail}
@@ -166,6 +169,7 @@ export const getStaticProps = async () => {
         'featuredImage',
         'gallery',
         'title',
+        'agency',
         'industry',
         'featured',
         'tags',

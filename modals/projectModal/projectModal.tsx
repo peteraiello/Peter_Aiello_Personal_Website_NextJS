@@ -38,6 +38,10 @@ interface ProjectModalProps {
      */
     title?: string,
     /**
+     * Agency (the agency the work was completed)
+     */
+    agency?: string,
+    /**
      * Content
      */
     content?: string,
@@ -65,6 +69,7 @@ export const ProjectModal = ({
     featuredImage,
     gallery,
     title,
+    agency,
     projectIDs,
     content,
     tags,
@@ -168,6 +173,9 @@ export const ProjectModal = ({
                             <Heading hTag={"3"} fontSize={"lg"} weight={"bold"} fontStyle={"san-serif"}>
                                 {title}
                             </Heading>
+                        }
+                        {agency &&
+                            <p className="font-transducer-extended text-sm"><span className="font-bold">Agency:</span> {agency}</p>
                         }
                         {tags &&
                             <Tags tags={tags} />

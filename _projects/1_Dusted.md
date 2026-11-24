@@ -28,6 +28,7 @@ gallery: [
   },
 ]
 title: 'Dusted'
+agency: 'Dusted'
 industry: 'Marketing'
 featured: true
 client: 'Dusted'

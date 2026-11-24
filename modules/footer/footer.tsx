@@ -12,7 +12,6 @@ interface FooterProps {
 export const Footer = ({
     footerText
 }:FooterProps) => {
-
     return(
         <footer className="pb-12">
             <div className="wrapper max-w-[1200px] px-4">

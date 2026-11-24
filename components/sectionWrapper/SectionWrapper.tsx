@@ -59,21 +59,21 @@ export const SectionWrapper = ({
                 </div>
             }           
             {theme === "overview" ?    
-                    <div className="flex items-center gap-x-[50px] md:gap-x-[100px] mt-[80px] md:mt-[118px]">
-                        <div className="w-[60%] relative block z-[1]">
+                    <div className="flex items-center gap-x-[30%] md:gap-x-[100px] mt-[80px] md:mt-[118px]">
+                        <div className="w-1/2 scale-150 md:scale-100 md:w-[60%] relative block z-[1]">
                             <TrackStraight />
                         </div>
                         <div className="flex items-center w-1/2 md:w-[40%] relative">
-                            <Image quality={100} className="absolute left-[-25%]" width={640} height={424} src={!darkThemeActive ? InitialsGradient?.src : InitialsGradientDarkBg?.src} alt={"Initials gradient"} />                                
-                            <div className="relative w-[50%]">
+                            <Image quality={100} className="absolute scale-150 md:scale-100 left-[-25%]" width={640} height={424} src={!darkThemeActive ? InitialsGradient?.src : InitialsGradientDarkBg?.src} alt={"Initials gradient"} />                                
+                            <div className="relative w-[50%] scale-150 md:scale-100">
                                 <Initials />
                             </div>
                         </div>
                     </div>
             : theme === "portfolio" ?
-                    <div className="relative flex items-center gap-[100px] my-[118px] z-[-10] overflow-visible">
-                        <div className="w-[60%] absolute right-0 z-[2]">
-                            <TrackStraight />
+                    <div className="relative flex items-center gap-[10%] md:gap-x-[100px] my-[118px] z-[-10] overflow-visible">
+                        <div className="w-[40%] md:w-[60%]  absolute right-0 z-[2] overflow-x-clip">
+                           <div className="scale-150 md:scale-100"><TrackStraight /></div>
                         </div>
                         <div className="flex justify-center items-center w-[40%] absolute left-0">
                             <div className="w-[100px] z-[1]">
@@ -100,11 +100,11 @@ export const SectionWrapper = ({
                         </div>
                     </div>
             :theme === "experience" ?
-                <div className="flex items-center gap-[50px] my-[50px] md:my-[118px] overflow-x-clip">
-                    <div className="w-[60%]">
+                <div className="flex items-center gap-[20%] md:gap-[50px] my-[50px] md:my-[118px] overflow-x-clip">
+                    <div className="w-[40%] md:w-[60%] scale-150">
                         <TrackStraight />
                     </div>
-                    <div className="w-[40%]">    
+                    <div className="w-[60%] md:w-[40%]">    
                         <div className="relative flex items-center justify-center">
                             <Image className="absolute scale-150 md:scale-100 z-[-10]" width={750} height={750} quality={100} alt={"Gradient portfolio section"} src={!darkThemeActive ? PortfolioGradient?.src : PortfolioGradientDrk?.src} />
                             <div className="relative w-[145px] scale-[80%] md:scale-100">

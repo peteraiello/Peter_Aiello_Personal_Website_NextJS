@@ -11,14 +11,14 @@ export const Asterisk = () => {
 
     return (
         <>
-            <svg width="143" height="145" viewBox="0 0 143 145" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-            <rect width="143" height="145" fill="url(#pattern0_2291_884)"/>
-            <defs>
-            <pattern id="pattern0_2291_884" patternContentUnits="objectBoundingBox" width="1" height="1">
-            <use xlinkHref="#image0_2291_884" transform="scale(0.00342563 0.00337838)"/>
-            </pattern>
-            <image id="image0_2291_884" width="292" height="296" preserveAspectRatio="none" xlinkHref={darkThemeActive ? darkThemeString : redThemeString} />
-            </defs>
+            <svg className="asterisk-graphic" width="143" height="145" viewBox="0 0 143 145" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                <rect width="143" height="145" fill="url(#pattern0_2291_884)"/>
+                <defs>
+                <pattern id="pattern0_2291_884" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlinkHref="#image0_2291_884" transform="scale(0.00342563 0.00337838)"/>
+                </pattern>
+                <image id="image0_2291_884" width="292" height="296" preserveAspectRatio="none" xlinkHref={darkThemeActive ? darkThemeString : redThemeString} />
+                </defs>
             </svg>
 
         </>

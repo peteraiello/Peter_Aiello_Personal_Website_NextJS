@@ -48,6 +48,7 @@ gallery: [
 ]
 title: 'PIDG'
 industry: 'Investment'
+agency: 'Dusted'
 featured: false
 tags: ["React", "TypeScript", "Next", "Figma", "Tailwind CSS", "Storybook"]
 excerpt: "Headless architecture for a leading investment group."
