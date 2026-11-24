@@ -1,0 +1,71 @@
+yarn run v1.22.22
+$ /Users/peteraiello/repos/Peter_Aiello_Personal_Website_NextJS/node_modules/.bin/tsc --noEmit
+components/AnimatedElement/animated-element.tsx(6,5): error TS7008: Member 'children' implicitly has an 'any' type.
+components/AnimatedElement/animated-element.tsx(26,26): error TS7006: Parameter 'index' implicitly has an 'any' type.
+components/AppWrapper/app-wrapper.tsx(6,29): error TS7031: Binding element 'children' implicitly has an 'any' type.
+components/AppWrapper/app-wrapper.tsx(10,27): error TS7006: Parameter 'e' implicitly has an 'any' type.
+components/Typewriter/Typewriter.tsx(4,30): error TS7031: Binding element 'text' implicitly has an 'any' type.
+components/button/theme-toggle.tsx(10,27): error TS7006: Parameter 'e' implicitly has an 'any' type.
+components/card/card.tsx(68,16): error TS7006: Parameter 'e' implicitly has an 'any' type.
+components/card/card.tsx(99,27): error TS7006: Parameter 'event' implicitly has an 'any' type.
+components/card/card.tsx(172,55): error TS7006: Parameter 'event' implicitly has an 'any' type.
+components/gradients/gradient.tsx(38,27): error TS7006: Parameter 'gradientDirection' implicitly has an 'any' type.
+components/gradients/gradient.tsx(48,28): error TS7006: Parameter 'fromColour' implicitly has an 'any' type.
+components/gradients/gradient.tsx(70,26): error TS7006: Parameter 'toColour' implicitly has an 'any' type.
+components/gradients/gradient.tsx(92,25): error TS7006: Parameter 'opacity' implicitly has an 'any' type.
+components/gradients/gradientWrapper.tsx(3,34): error TS7031: Binding element 'children' implicitly has an 'any' type.
+components/image/image.tsx(53,24): error TS7006: Parameter 'border' implicitly has an 'any' type.
+components/image/image.tsx(63,29): error TS7006: Parameter 'size' implicitly has an 'any' type.
+components/image/image.tsx(79,27): error TS7006: Parameter 'fit' implicitly has an 'any' type.
+components/image/image.tsx(91,27): error TS7006: Parameter 'rounded' implicitly has an 'any' type.
+components/image/image.tsx(101,27): error TS7006: Parameter 'size' implicitly has an 'any' type.
+components/select/SelectFilter.tsx(2,29): error TS7016: Could not find a declaration file for module 'uuid'. '/Users/peteraiello/repos/Peter_Aiello_Personal_Website_NextJS/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+components/select/SelectFilter.tsx(45,28): error TS7006: Parameter 'event' implicitly has an 'any' type.
+components/tag/tag.stories.tsx(2,28): error TS7016: Could not find a declaration file for module 'uuid'. '/Users/peteraiello/repos/Peter_Aiello_Personal_Website_NextJS/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+components/tag/tags.tsx(3,29): error TS7016: Could not find a declaration file for module 'uuid'. '/Users/peteraiello/repos/Peter_Aiello_Personal_Website_NextJS/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+components/typography/heading.tsx(45,29): error TS7031: Binding element 'variant' implicitly has an 'any' type.
+components/typography/heading.tsx(63,30): error TS7031: Binding element 'weight' implicitly has an 'any' type.
+components/typography/heading.tsx(84,27): error TS7031: Binding element 'fontSize' implicitly has an 'any' type.
+components/typography/text.tsx(18,31): error TS7031: Binding element 'size' implicitly has an 'any' type.
+components/typography/text.tsx(46,32): error TS7031: Binding element 'weight' implicitly has an 'any' type.
+modals/projectModal/projectModal.tsx(10,28): error TS7016: Could not find a declaration file for module 'uuid'. '/Users/peteraiello/repos/Peter_Aiello_Personal_Website_NextJS/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+modals/projectModal/projectModal.tsx(99,26): error TS7006: Parameter 'e' implicitly has an 'any' type.
+modals/projectModal/projectModal.tsx(110,25): error TS7006: Parameter 'e' implicitly has an 'any' type.
+modules/experience/experience.tsx(7,28): error TS7016: Could not find a declaration file for module 'uuid'. '/Users/peteraiello/repos/Peter_Aiello_Personal_Website_NextJS/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+modules/header/header.tsx(52,21): error TS2322: Type 'MutableRefObject<undefined>' is not assignable to type 'LegacyRef<HTMLElement> | undefined'.
+  Type 'MutableRefObject<undefined>' is not assignable to type 'RefObject<HTMLElement>'.
+    Types of property 'current' are incompatible.
+      Type 'undefined' is not assignable to type 'HTMLElement | null'.
+modules/header/header.tsx(65,67): error TS2322: Type 'string | undefined' is not assignable to type 'Url'.
+  Type 'undefined' is not assignable to type 'Url'.
+modules/overview/overview.tsx(6,29): error TS7016: Could not find a declaration file for module 'uuid'. '/Users/peteraiello/repos/Peter_Aiello_Personal_Website_NextJS/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+modules/projects/project.tsx(65,20): error TS7006: Parameter 'layout' implicitly has an 'any' type.
+modules/projects/project.tsx(65,28): error TS7006: Parameter 'index' implicitly has an 'any' type.
+modules/projects/projects.tsx(6,29): error TS7016: Could not find a declaration file for module 'uuid'. '/Users/peteraiello/repos/Peter_Aiello_Personal_Website_NextJS/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+modules/projects/projects.tsx(38,16): error TS7006: Parameter 'e' implicitly has an 'any' type.
+modules/projects/projects.tsx(83,51): error TS7006: Parameter 'project' implicitly has an 'any' type.
+modules/projects/projects.tsx(92,64): error TS7006: Parameter 'project' implicitly has an 'any' type.
+modules/projects/projects.tsx(93,57): error TS7006: Parameter 'project' implicitly has an 'any' type.
+modules/projects/projects.tsx(103,55): error TS7006: Parameter 'project' implicitly has an 'any' type.
+modules/work/awards.tsx(4,29): error TS7016: Could not find a declaration file for module 'uuid'. '/Users/peteraiello/repos/Peter_Aiello_Personal_Website_NextJS/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+modules/writing/article.tsx(10,29): error TS7016: Could not find a declaration file for module 'uuid'. '/Users/peteraiello/repos/Peter_Aiello_Personal_Website_NextJS/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+modules/writing/articles.tsx(8,28): error TS7016: Could not find a declaration file for module 'uuid'. '/Users/peteraiello/repos/Peter_Aiello_Personal_Website_NextJS/node_modules/uuid/dist/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`
+pages/api/blog.ts(50,32): error TS7006: Parameter 'posts' implicitly has an 'any' type.
+pages/api/blog.ts(51,39): error TS7006: Parameter 'post' implicitly has an 'any' type.
+pages/api/blog.ts(57,33): error TS7006: Parameter 'posts' implicitly has an 'any' type.
+pages/api/blog.ts(58,39): error TS7006: Parameter 'post' implicitly has an 'any' type.
+utils/formatTag.tsx(1,20): error TS7006: Parameter 'string' implicitly has an 'any' type.
+utils/getTheDate.tsx(3,28): error TS7006: Parameter 'date' implicitly has an 'any' type.
+utils/getTheDate.tsx(5,42): error TS7006: Parameter 'date' implicitly has an 'any' type.
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
