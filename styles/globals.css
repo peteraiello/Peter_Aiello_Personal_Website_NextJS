@@ -76,6 +76,24 @@
         }
     }
 
+    @keyframes counter-clockwise {
+        0% {
+            transform: rotate(-78deg);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+
+    .logo-blue-lane {
+        animation: rotate 10s infinite linear; 
+        transform-origin: center;
+    }
+    
+    .logo-red-lane {
+        animation: rotate 10s infinite linear;
+        transform-origin: center;
+    }
 
     .forward-slash-graphic {
         animation: rotateY 6s infinite ease-in-out;
