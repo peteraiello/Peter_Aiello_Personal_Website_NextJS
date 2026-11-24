@@ -49,6 +49,42 @@
 
 @layer components {
 
+    @keyframes rotateY {
+        0% {
+            transform: rotateY(0deg);
+        }
+        20% {
+            transform: rotateY(0deg);
+        }
+        40% {
+            transform: rotateY(180deg);
+        }
+        60% {
+            transform: rotateY(180deg);
+        }
+        80% {
+            transform: rotateY(0deg);
+        }
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    .forward-slash-graphic {
+        animation: rotateY 6s infinite ease-in-out;
+    }
+
+    .asterisk-graphic {
+        animation: rotate 24s infinite ease-in-out;
+    }
+
     .wrapper {
         @apply container mx-auto px-3 md:px-0;
     }
@@ -169,7 +205,7 @@
     }
 
     .footer-text {
-        @apply prose-p:m-0 prose-a:text-brandRed dark:prose-a:text-brandBlue;
+        @apply prose-p:m-0 prose-a:text-brandRed dark:prose-a:text-brandBlue prose-a:relative prose-a:inline-block prose-a:after:absolute prose-a:after:border-brandRed prose-a:dark:after:border-brandBlue prose-a:after:transition-all prose-a:after:duration-300 prose-a:after:w-0 prose-a:after:hover:w-full prose-a:after:bottom-0 prose-a:after:border-b prose-a:after:flex prose-a:no-underline;
     }
     
     select {
@@ -222,3 +258,4 @@
         @apply dark:text-white bg-transparent rounded-lg dark:border-brandBlue border-brandRed placeholder:font-carbon focus:ring-brandRed dark:focus:ring-brandBlue text-[16px] font-carbon;
     }    
 } 
+

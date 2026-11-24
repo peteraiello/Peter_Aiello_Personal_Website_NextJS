@@ -31,6 +31,7 @@ title: 'Keller'
 industry: 'Engineering'
 featured: false
 client: 'Keller'
+agency: 'Dusted'
 tags: ["JavaScript", "Storybook", "Figma"]
 excerpt: "Comprehensive UI library for the world's largest geotechnical engineering company."
 content: "I built the Storybook component library behind Keller’s multilingual Drupal sites. Keller, the world’s largest geotechnical engineering firm, wanted a fresh look across its sites while retaining Drupal as its CMS. I developed 80+ modules in Twig, CSS and vanilla JavaScript with separate stories to preview them. I followed a detailed responsive Figma design closely and delivered my phase ahead of schedule, ready for Drupal integration. The first site, in Austria, launched in July 2026."

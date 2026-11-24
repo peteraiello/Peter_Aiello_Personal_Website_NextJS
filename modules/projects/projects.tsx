@@ -149,14 +149,15 @@ export const Projects = ({
                             </div>
                         }     
                     </div>
-                    {Boolean(filteredProjects?.length > 0 ) ?
+                    {filteredProjects ?
                         <div className="flex flex-col md:grid md:grid-cols-12 gap-8">
                             {filteredProjects?.map((project, index) => { 
                                 let id = uuidv4();                                                                      
                                 let newIndex = index; 
-                                return(
+                                return(                                
+                                    project.status === "published" &&
+                                       
                                     <div key={id} className="w-full md:col-span-6 lg:col-span-4">
-                                            {project.status === "published" &&
                                                 <Card 
                                                     key={id}
                                                     index={newIndex}
@@ -168,13 +169,13 @@ export const Projects = ({
                                                     featured={project?.featured}
                                                     excerpt={project?.excerpt}
                                                     content={project?.content}
+                                                    agency={project?.agency}
                                                     gallery={project?.gallery}
                                                     buttonLink={project?.buttonLink}   
                                                     setActiveProject={setActiveProject}
                                                     setModalOpen={setModalOpen}
-                                                />
-                                            }
-                                    </div>                                       
+                                                />                                        
+                                    </div>        
                                 )}
                             )}
                         </div>

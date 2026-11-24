@@ -46,6 +46,10 @@ export interface CardProps {
      * Industry (i.e. Marketing, New Media)
      */
     industry?: string,
+    /** 
+     * Agency (i.e. the name of the agency where the work was completed) 
+     */
+    agency?: string,
     /**
      * Excerpt
      */
@@ -83,6 +87,7 @@ export const Card = ({
     thumbnail,
     featuredImage,
     gallery,
+    agency,
     tags,
     excerpt,
     content,
@@ -113,6 +118,7 @@ export const Card = ({
                 thumbnail: thumbnail,
                 featuredImage: featuredImage,
                 tags: tags,
+                agency: agency,
                 buttonLink: buttonLink,
                 gallery: gallery,
             }
@@ -153,7 +159,7 @@ export const Card = ({
                             </div>
                             {tags && 
                                 <Tags tags={tags} />
-                            }
+                            }                    
                             {excerpt &&
                                 <div className="pb-5 md:pb-0">
                                     <TextContent>
