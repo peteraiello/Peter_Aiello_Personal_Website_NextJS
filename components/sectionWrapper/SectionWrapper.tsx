@@ -101,7 +101,7 @@ export const SectionWrapper = ({
                     </div>
             :theme === "experience" ?
                 <div className="flex items-center gap-[20%] md:gap-[50px] my-[50px] md:my-[118px] overflow-x-clip">
-                    <div className="w-[40%] md:w-[60%] scale-150">
+                    <div className="w-[40%] md:w-[60%] scale-150 md:scale-100">
                         <TrackStraight />
                     </div>
                     <div className="w-[60%] md:w-[40%]">    
