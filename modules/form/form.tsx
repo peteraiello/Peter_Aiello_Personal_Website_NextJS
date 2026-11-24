@@ -92,9 +92,9 @@ export const Form = ({
                                 <textarea required={true} name="message" id="message" placeholder="Hi, I'm interested in getting to know more about..." />
                             </div>
                             <div>
-                                <button type="submit" disabled={status === "sending"} className="dark:bg-brandBlue bg-brandRed dark:text-[#1D1E20] text-white text-center rounded-lg w-full font-transducer font-normal py-3">Submit</button>
+                                <button type="submit" disabled={status === "sending"} className="transition-all duration-300 ease-in-out border-[3px] border-transparent hover:dark:border-brandBlue hover:dark:text-brandBlue hover:dark:bg-transparent hover:bg-darkGray dark:bg-brandBlue bg-brandRed dark:text-[#1D1E20] text-white text-center rounded-lg w-full font-transducer font-normal py-3">Submit</button>
                             </div>
-                            <div className={ cx(messageStyles, `transition-all ease-in-out duration-300 border rounded-lg px-4 py-2`)} role="alert">
+                            <div className={ cx(messageStyles, `transition-all duration-300 ease-in-out border rounded-lg px-4 py-2`)} role="alert">
                                 <p className={cx(status === "sending" ? "text-orange-400 bg-orange-100" : status === "success" ? `text-[green]` : `font-carbon font-bold`)}>
                                     {messageText}
                                 </p>
