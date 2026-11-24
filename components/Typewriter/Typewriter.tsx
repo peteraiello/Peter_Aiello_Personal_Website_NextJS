@@ -12,7 +12,7 @@ export function Typewriter({ text, duration = 3 }) {
         ease: "linear",
         repeat: Infinity,
         repeatType: "reverse", 
-        repeatDelay: 1,
+        repeatDelay: 3,
       })
       return () => controls.stop()
     }, [text, duration])
