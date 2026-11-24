@@ -37,7 +37,7 @@ export const Button = ({
     border
 }: buttonProps) => {
 
-    const base = `drop-shadow-lg cursor button group px-5 py-2 bg-black dark:bg-white rounded-[10px]`;
+    const base = `drop-shadow-lg cursor button group px-5 py-2 bg-black border-[2px] dark:hover:text-white dark:hover:bg-transparent dark:hover:border-white border-transparent hover:border-darkGray hover:bg-transparent hover:text-darkGray dark:bg-white rounded-[10px]`;
 
     const typography = `text-white dark:text-brandBlue text-sm tracking-wide font-bold font-transducer`;
     
