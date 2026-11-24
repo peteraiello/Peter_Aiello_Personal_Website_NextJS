@@ -12,6 +12,10 @@ import { AnimatedElement } from "../../components/AnimatedElement/animated-eleme
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
 import { idProps } from "../../types";
 
+type IDProp = {
+    id?: string;
+}
+
 interface ProjectModalProps {
     /**
      * Show modal 
@@ -44,7 +48,7 @@ interface ProjectModalProps {
     /**
      * Project Ids
      */
-    projectIDs?: idProps[],
+    projectIDs?:  IDProp[],
     /**
      * Button
      */
@@ -77,15 +81,16 @@ export const ProjectModal = ({
     const {modalOpen, toggleModal} = useContext(ThemeContext);
 
     useEffect(() => {
-        let projectsArr = [];
-        Boolean(projectIDs && projectIDs?.length > 0) && projectIDs.forEach((project) => {return (projectsArr?.push(project?.id))});
+
+        let projectsArr = projectIDs?.map((project) => project.id) ?? [];        
+
         const identifier = router.asPath.split("#")[1];
         if(identifier && projectsArr.includes(identifier)) {
-            toggleModal();
+            toggleModal?.();
         }
         const handleKeyDown = (event: KeyboardEvent) => {
             if(event?.key === "Escape" && modalOpen === true) {
-                toggleModal();
+                toggleModal?.();
             }
         }
         window.addEventListener("keydown", handleKeyDown);
@@ -97,7 +102,7 @@ export const ProjectModal = ({
         if(Boolean(targetClasses?.length > 0)) {
             if([...targetClasses].includes("project-modal")) {
                 e.preventDefault();
-                toggleModal();
+                toggleModal?.();
             }
         }
     }
@@ -105,7 +110,7 @@ export const ProjectModal = ({
     const keyPressed = (e) => {
         e.preventDefault();
         if(e.keyCode === 13) {
-            toggleModal();
+            toggleModal?.();
         }
     }
 
@@ -116,7 +121,7 @@ export const ProjectModal = ({
             <div className="project-modal__content overflow-auto bg-white w-full md:max-w-[800px] md:max-h-[700px] mx-auto px-5 pt-5 pb-20 rounded-0 md:rounded-lg" role="dialog" aria-modal="true" aria-label="Project modal">
                 <div className="project-modal-close-button__wrapper w-full flex justify-end">
                     <span className="mt-2 mb-2">
-                        <button className="project-modal__close" aria-label="Close modal" onKeyDown={(e) => keyPressed(e)} onClick={() => toggleModal()}>
+                        <button className="project-modal__close" aria-label="Close modal" onKeyDown={(e) => keyPressed(e)} onClick={() => toggleModal?.()}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                                 <path d="M2.6 21.5L0.5 19.4L8.9 11L0.5 2.6L2.6 0.5L11 8.9L19.4 0.5L21.5 2.6L13.1 11L21.5 19.4L19.4 21.5L11 13.1L2.6 21.5Z" fill="currentColor"></path>
                             </svg>
@@ -164,7 +169,7 @@ export const ProjectModal = ({
                                 {title}
                             </Heading>
                         }
-                        {Boolean(tags?.length > 0) &&
+                        {tags &&
                             <Tags tags={tags} />
                         }
                         {content &&

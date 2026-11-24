@@ -34,10 +34,10 @@ export default function Post({ post, preview }: Props) {
   const isPublished = `${!post?.draft}`
 
   useEffect(() => {
-    const d = new Date(post?.date);
+    const d = post?.date && new Date(post?.date);
     const formattedDate = d?.toLocaleDateString();
     formattedDate && setPostDate(formattedDate);
-    const d2 = new Date(post?.lastEdited);
+    const d2 = post?.lastEdited && new Date(post?.lastEdited);
     const formattedDate2 = d2?.toLocaleDateString();
     formattedDate2 && setUpDate(formattedDate2);
   }, [post]);

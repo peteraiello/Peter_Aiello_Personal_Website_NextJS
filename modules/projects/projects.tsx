@@ -63,7 +63,7 @@ export const Projects = ({
 
     useEffect(() => {
 
-        if(Boolean(projects?.length > 0)) {
+        if(Boolean(projects)) {
             
             let projectsDataLowercaseSkills = [] as any;
 
@@ -71,7 +71,7 @@ export const Projects = ({
 
             let filteredByIndustry = [] as any;
 
-            if(Boolean(projects?.length > 0)) {
+            if(Boolean(projects)) {
                  projects?.map((project) => {            
                     const newProjectTags = project?.tags?.map((tag) => {return tag?.toLowerCase()?.replace(" ", "-")});
                     const newProject = {...project, tags: newProjectTags}
@@ -91,7 +91,9 @@ export const Projects = ({
             if((selectedSkillsFilter !== "technical-skills") && (selectedIndustryFilter !== "industry-sector")) {  
                 filteredByIndustry = filteredBySkills?.filter((project) => {return project?.industry?.toLowerCase() === selectedIndustryFilter});
                 const titles = filteredByIndustry?.map((project => project?.title));
-                setFilteredProjects(projects?.filter((project) => {return titles?.includes(project?.title)}))
+                setFilteredProjects(
+                    projects?.filter((project) => titles?.includes(project?.title)) ?? []
+                )
             /* Skill NOT selected AND industry selected */
             } else if((selectedSkillsFilter === "technical-skills") && (selectedIndustryFilter !== "industry-sector")) {
                 filteredByIndustry = projects?.filter((project) => {return project?.industry?.toLowerCase() === selectedIndustryFilter})
@@ -99,18 +101,24 @@ export const Projects = ({
             /* Skill selected AND industry NOT selected */
             } else if((selectedSkillsFilter !== "technical-skills") && (selectedIndustryFilter === "industry-sector")) {
                 const titles = filteredBySkills?.map((project => project?.title));
-                setFilteredProjects(projects?.filter((project) => {return titles?.includes(project?.title)}))                        
+                setFilteredProjects(
+                    projects?.filter((project) => titles?.includes(project?.title)) ?? []
+                )
             /* Skill NOT selected AND industry NOT selected */
             } else if (selectedSkillsFilter === "technical-skills" && selectedIndustryFilter === "industry-sector") {
-                setFilteredProjects(projects);
+                projects && setFilteredProjects(projects);
             }
         }
     }, [selectedSkillsFilter, selectedIndustryFilter]);
 
     useEffect(() => {
-        setSelectedSkillsFilter(formatTag(filters?.skills[0]));
-        setSelectedIndustryFilter(formatTag(filters?.industries[0]));
-        setFilteredProjects(projects);
+        setSelectedSkillsFilter(
+            filters?.skills && formatTag(filters?.skills[0])
+        );
+        setSelectedIndustryFilter(
+            filters?.industries && formatTag(filters?.industries[0])
+        );
+        projects && setFilteredProjects(projects);
     }, [])
 
     return (

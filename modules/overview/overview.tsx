@@ -96,7 +96,7 @@ export const Overview = ({
                         }
                         {name &&
                             <div className="flex items-center gap-[10px]">
-                                <span className="min-w-6 md:w-[55px]">
+                                <span className="w-[24px] md:w-[55px]">
                                     <GreaterThanIcon />
                                 </span>
                                 {name &&
@@ -104,7 +104,7 @@ export const Overview = ({
                                         <Typewriter text={name} />
                                     </span>
                                 }
-                                <span className="min-w-6 md:w-[55px]">
+                                <span className="w-[24px] md:w-[55px]">
                                     <LessThanIcon />
                                 </span>
                             </div>

@@ -50,15 +50,6 @@ export default function Home({
         content: "",
     } as CardProps);
 
-    useEffect(() => {
-
-        let projectsArr = [];
-
-        Boolean(projectIds && projectIds?.length > 0) && projectIds.forEach((project) => {return (projectsArr?.push(project?.id))});
-    
-    }, []);
-
-
 
     useEffect(() => {
 

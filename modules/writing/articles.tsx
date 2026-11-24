@@ -72,7 +72,7 @@ export const Articles = ({
                     </div>
                 </div>
                 <div className="flex flex-col gap-lg">
-                    {Boolean(publicPosts?.length > 0 && Boolean(publicPosts?.length > 0)) ?
+                    {publicPosts ?
                         publicPosts.map((blog, index) => {
                             let id = uuidv4();
                             return(

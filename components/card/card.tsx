@@ -151,7 +151,7 @@ export const Card = ({
                                     <StarIcon />
                                 }
                             </div>
-                            {Boolean(tags && tags?.length > 0) && 
+                            {tags && 
                                 <Tags tags={tags} />
                             }
                             {excerpt &&
