@@ -95,7 +95,7 @@ export const Overview = ({
                             </div>
                         }
                         {name &&
-                            <div className="flex items-center gap-[10px]">
+                            <div className="flex items-center md:gap-[10px]">
                                 <span className="min-w-6 md:w-[55px]">
                                     <GreaterThanIcon />
                                 </span>

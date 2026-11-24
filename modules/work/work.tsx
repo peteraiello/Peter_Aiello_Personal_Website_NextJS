@@ -61,9 +61,9 @@ export const Work = ({
                 </div>
                 <div className="col-span-12 md:col-span-8 lg:col-start-9 lg:col-span-4">
                     <Awards 
-                        title={awards.title}
-                        subtitle={awards.subtitle}
-                        awards={awards.awards}
+                        title={awards?.title}
+                        subtitle={awards?.subtitle}
+                        awards={awards?.awards}
                     />
                 </div>
             </div>

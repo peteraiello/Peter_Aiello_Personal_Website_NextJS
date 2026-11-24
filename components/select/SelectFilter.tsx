@@ -55,7 +55,7 @@ export const SelectFilter = ({
                 onChange={(event) => changeHandler(event)} 
                 value={selectedFilter }
             >
-                {(Boolean(newOptions) && newOptions?.length > 0) &&
+                {newOptions &&
                     newOptions?.map((option) => {
                         let id = uuidv4();                                                                      
                         return (

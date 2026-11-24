@@ -3,7 +3,7 @@ import { useRef } from "react";
 import {useInView} from 'framer-motion';
 import cx from "classnames";
 interface AnimatedElementProps {
-    children?
+    children?,
     speed?: 'slow' | 'medium' | 'fast',
     index?: number
     classNames?: string,
