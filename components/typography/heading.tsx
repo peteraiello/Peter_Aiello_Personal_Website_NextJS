@@ -100,7 +100,7 @@ export const Heading = ({
             break;
             case "lg": 
                 /* font size 48px */
-                fontClass = "text-[39px] md:text-[43px] lg:text-[48px]"
+                fontClass = "text-[24px] md:text-[43px] lg:text-[48px]"
             break; 
             case "md": 
                 /* font size 24px */

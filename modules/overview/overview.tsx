@@ -151,7 +151,9 @@ export const Overview = ({
                     <div className="flex flex-col justify-center md:justify-end w-full">
                         <div className="hidden md:block relative">                                                                        
                             <Image className="profile-pic-blur-desktop z-[-1] absolute w-full h-full scale-150" quality={100} width={640} height={966} src={ !darkThemeActive ? profilePicGradient.src : profilePicGradientDrk.src } alt={"Profile pic gradient"} />
-                            <ProfileImage image={{src: profileImage?.src, alt: "peter aiello profile pic desktop"}}  />                   
+                            {profileImage?.src &&
+                                <ProfileImage image={{src: profileImage?.src, alt: "peter aiello profile pic desktop"}}  />                   
+                            }
                         </div>
                         {skillGroups &&
                             <div className="flex flex-col gap-md lg:gap-[60px] mt-sm md:mt-md">

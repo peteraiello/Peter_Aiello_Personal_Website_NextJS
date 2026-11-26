@@ -129,6 +129,13 @@ export default function Home({
                         buttonLink={activeCard?.buttonLink}
                         gallery={activeCard?.gallery}
                     />
+
+                    <Experience 
+                        id={ExperienceData.id}
+                        title={ExperienceData.title}
+                        experiences={ExperienceData.experience}
+                    />
+                    
                     
                     <Articles
                         id={'blog'}
@@ -137,13 +144,7 @@ export default function Home({
                         articles={latestPersonalBlog}     
                         noPublishedPostsMsg={'Coming soon'}                       
                     />    
-                    
-                    <Experience 
-                        id={ExperienceData.id}
-                        title={ExperienceData.title}
-                        experiences={ExperienceData.experience}
-                    />
-                    
+                                
                     <Form />
 
                     <Footer 

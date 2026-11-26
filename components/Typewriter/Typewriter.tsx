@@ -19,7 +19,7 @@ export function Typewriter({ text, duration = 3 }) {
     }, [text, duration])
 
     return (
-        <motion.h1 className="text-brandRed whitespace-nowrap dark:text-brandBlue font-transducer-extended font-bold text-[40px] md:text-[48px] lg:text-[72px]">
+        <motion.h1 className="text-brandRed whitespace-nowrap dark:text-brandBlue font-transducer-extended font-bold text-[34px] md:text-[48px] lg:text-[72px]">
             {displayed}
         </motion.h1>
     )

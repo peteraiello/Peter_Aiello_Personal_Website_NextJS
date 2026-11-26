@@ -28,8 +28,8 @@ export const ProfileLink = ({
 }:profileLinkProps) => {    
     return (
         <li className="w-full">
-            <a href={customLink?.href} target={customLink?.target} className={"flex flex-row items-center gap-[10px] group"}>
-                <div className={"icon-wrapper min-w-[40px] w-[40px] h-[40px]"}>
+            <a href={customLink?.href} target={customLink?.target} className={"flex flex-row items-center gap-[14px] group"}>
+                <div className={"icon-wrapper w-[32px] h-[32px] md:w-[40px] md:h-[40px]"}>
                     {preLabel === "WWW" ? 
                         <SiteIcon />
                     : preLabel === "EM" ?
@@ -42,7 +42,7 @@ export const ProfileLink = ({
                 </div>   
             
                 {label &&
-                    <span className="relative text-[21px] font-transducer text-brandRed dark:text-brandBlue group-hover:opacity-90 after:w-[0] group-hover:after:w-full after:transition-all after:ease-in-out after:duration-300 after:border-brandRed dark:after:border-brandBlue after:border-b-[1px] after:block">{label}</span>
+                    <span className="relative text-[14px] md:text-[21px] font-transducer text-brandRed dark:text-brandBlue group-hover:opacity-90 after:w-[0] group-hover:after:w-full after:transition-all after:ease-in-out after:duration-300 after:border-brandRed dark:after:border-brandBlue after:border-b-[1px] after:block">{label}</span>
                 }
             </a>
         </li>

@@ -58,16 +58,22 @@ export const SectionWrapper = ({
                 </div>
             }           
             {theme === "overview" ?    
-                    <div className="flex items-center gap-x-[30%] md:gap-x-[100px] mt-[80px] md:mt-[118px]">
-                        <div className="w-1/2 scale-150 md:scale-100 md:w-[60%] relative block z-[1]">
-                            <TrackStraight />
+                    <div className="flex relative items-center gap-x-[80px] md:gap-x-[100px] mt-[80px] md:mt-[118px]">
+                        {/* <div className="w-1/2 scale-150 md:scale-100 md:w-[60%] relative block z-[1]"> */}
+                        <div className="w-1/2 overflow-x-clip">
+                            <div className="scale-[250%]"><TrackStraight /></div>
                         </div>
-                        <div className="flex items-center w-1/2 md:w-[40%] relative">
-                            <Image quality={100} className="absolute scale-150 md:scale-100 left-[-25%]" width={640} height={424} src={!darkThemeActive ? InitialsGradient?.src : InitialsGradientDarkBg?.src} alt={"Initials gradient"} />                                
-                            <div className="relative w-[50%] scale-150 md:scale-100">
-                                <Initials />
+                        {/* </div> */}
+                        {/* <div className="flex items-center w-1/2 md:w-[40%] relative"> */}
+                        <div className="w-1/2">
+                            <div className="flex items-center relative">
+                            <Image quality={100} className="absolute z-[-1] scale-[220%]" width={640} height={424} src={!darkThemeActive ? InitialsGradient?.src : InitialsGradientDarkBg?.src} alt={"Initials gradient"} />                                
+                                <div className="relative w-[50%] scale-[175%] md:scale-100">
+                                    <Initials />
+                                </div>
                             </div>
                         </div>
+                        {/* </div> */}
                     </div>
             : theme === "portfolio" ?
                     <div className="relative flex items-center gap-[10%] md:gap-x-[100px] my-[118px] z-[-10] overflow-visible">
@@ -83,9 +89,9 @@ export const SectionWrapper = ({
                     </div>
             : theme === "blog" ?
                     <div className="wrapper max-w-[1400px]">
-                        <div className="my-[60px]">
+                        <div className="mt-[50px] md:my-[60px]">
                             <div className="grid grid-cols-12">
-                                <div className="col-start-5 col-span-8">
+                                <div className="col-start-2 col-span-10 md:col-start-5 md:col-span-8">
                                     <div className="flex relative">
                                         <div className="flex absolute top-0 left-0 w-full h-full  items-center justify-center">
                                             <Image quality={100} className="scale-100" fill={true} src={ darkThemeActive ? ArticleGradientBlue.src : ArticleGradientRed?.src} alt={"dark theme pattern"} />
