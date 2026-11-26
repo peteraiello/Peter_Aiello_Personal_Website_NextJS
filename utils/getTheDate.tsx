@@ -1,6 +1,6 @@
 import {format} from 'date-fns';
 
-export const getTheDate = (date) => {
+export const getTheDate = (date: string) => {
 
     function formatDateWithOrdinalSuffix(date) {
         return format(date, "do MMMM yyyy");

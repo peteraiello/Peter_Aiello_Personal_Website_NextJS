@@ -3,11 +3,6 @@ export const ExperienceData = {
     id: 'experience',
     experience: [
         {
-            company: "Charities and non-profit's",
-            date: "Oct 2025 - Present",
-            description: "I moved to Canada in 2025, where I’ve been working for various charities and non-profits, with a variety of responsibilities (cooking, driving, etc.).",
-        },
-        {
             company: 'Frontend Developer',
             position: 'Dusted',
             date: 'Feb 2021 - Oct 2025',
@@ -16,14 +11,14 @@ export const ExperienceData = {
         },
         {
             company: 'WordPress Developer',
-            position: 'PMW Communcications',
+            position: 'PMW Communications',
             date: 'Feb 2018 - Jul 2020',
             description:  
                 `I worked as a WordPress developer for a full-service marketing agency. One of my main projects was a complete overhaul of their existing website, which I transformed into an SEO-optimized, business-generating digital product.`,
         },
         {
-            company: 'Austin Marketing',
-            position: 'Dusted | Frontend Developer',
+            company: 'Designer and Developer',
+            position: 'Austin Marketing',
             date: 'Jul 2016 - Feb 2018',
             description: 
                 `In my first full-time role as a web designer and developer, I worked in a small team for a long-established agency. My responsibilities included designing and building websites using pre-existing WordPress themes. `,
@@ -39,6 +34,11 @@ export const ExperienceData = {
             date: '2010 - 2014',
             description: 
                 `While studying, my course featured an internship module, which I used to gain experience at a national magazine (New Statesman).`,
+        },
+        {
+            company: "Charities and non-profits",
+            date: "Oct 2025 - Present",
+            description: "I moved to Canada in 2025, where I’ve been working for various charities and non-profits, with a variety of responsibilities (cooking, driving, etc.).",
         },
     ]
 }

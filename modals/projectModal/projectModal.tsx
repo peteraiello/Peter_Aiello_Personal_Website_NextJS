@@ -101,18 +101,11 @@ export const ProjectModal = ({
         window.addEventListener("keydown", handleKeyDown);
     }, []); 
 
-    const areaClicked = (e) => {
-        let eventTarget = e?.target; 
-        let targetClasses = eventTarget?.classList; 
-        if(Boolean(targetClasses?.length > 0)) {
-            if([...targetClasses].includes("project-modal")) {
-                e.preventDefault();
-                toggleModal?.();
-            }
-        }
-    }
+    const buttonClicked = (e: React.MouseEvent<HTMLButtonElement>) => {
+        toggleModal?.();
+    }   
 
-    const keyPressed = (e) => {
+    const keyPressed = (e: React.KeyboardEvent<HTMLButtonElement>) => {
         e.preventDefault();
         if(e.keyCode === 13) {
             toggleModal?.();
@@ -120,13 +113,11 @@ export const ProjectModal = ({
     }
 
     return (
-        <div className={cx(modalOpen ? "block" : "hidden", "modal project-modal bg-black/90 fixed top-0 h-full md:pt-10 lg:pt-20 w-full flex justify-center z-[9999]")}
-            onClick={(e) => areaClicked(e)}
-        >
+        <div className={cx(modalOpen ? "block" : "hidden", "modal project-modal bg-black/90 fixed top-0 h-full md:pt-10 lg:pt-20 w-full flex justify-center z-[9999]")}>
             <div className="project-modal__content overflow-auto bg-white w-full md:max-w-[800px] md:max-h-[700px] mx-auto px-5 pt-5 pb-20 rounded-0 md:rounded-lg" role="dialog" aria-modal="true" aria-label="Project modal">
                 <div className="project-modal-close-button__wrapper w-full flex justify-end">
                     <span className="mt-2 mb-2">
-                        <button className="project-modal__close" aria-label="Close modal" onKeyDown={(e) => keyPressed(e)} onClick={() => toggleModal?.()}>
+                        <button onClick={buttonClicked} type="button" className="project-modal__close" aria-label="Close modal" onKeyDown={(e) => keyPressed(e)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                                 <path d="M2.6 21.5L0.5 19.4L8.9 11L0.5 2.6L2.6 0.5L11 8.9L19.4 0.5L21.5 2.6L13.1 11L21.5 19.4L19.4 21.5L11 13.1L2.6 21.5Z" fill="currentColor"></path>
                             </svg>

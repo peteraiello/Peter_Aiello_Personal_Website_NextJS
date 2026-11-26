@@ -7,7 +7,7 @@ export const AppWrapper = ({children}) => {
 
     const {darkThemeActive, toggleModal} = useContext(ThemeContext);
 
-    const onKeyPressed = (e) => {
+    const onKeyPressed = (e: React.KeyboardEvent<HTMLElement>) => {
         /* e.preventDefault() commented out for now, 
             because interfers with HTML form inputs */
         // e.preventDefault();

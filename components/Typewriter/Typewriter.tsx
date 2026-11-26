@@ -4,6 +4,7 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion"
 export function Typewriter({ text, duration = 3 }) {
 
     const count = useMotionValue(0)
+
     const displayed = useTransform(count, (latest) => text.slice(0, Math.round(latest)))
   
     useEffect(() => {

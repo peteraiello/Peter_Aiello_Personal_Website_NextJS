@@ -70,7 +70,7 @@ export const Form = ({
         <SectionWrapper theme={"contact"} id="form">
             <div className="wrapper max-w-[1400px]">
                 <div className="grid grid-cols-12 gap-y-16">
-                    <div className="col-span-12 md:col-start-2 col-end-12">
+                    <div className="col-span-12 md:col-start-2 col-end-13">
                         <Heading classes={"text-center"} hTag={'3'} fontSize={"lg"} fontStyle={"san-serif"} weight={"bold"}>If you would like to get in touch, send me a message.</Heading>
                     </div>
                         <div className="col-span-12 md:col-start-3 md:col-end-11 md:col-span-8">

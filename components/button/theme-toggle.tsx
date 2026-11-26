@@ -7,7 +7,7 @@ export const ThemeToggleButton = () => {
 
     const {darkThemeActive, toggleDarkTheme} = useContext(ThemeContext);
 
-    const clickHandler = (e) => {
+    const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         toggleDarkTheme !== undefined && toggleDarkTheme();
     }

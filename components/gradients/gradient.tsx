@@ -2,6 +2,10 @@ import React from "react";
 import { colours } from "../../global-types";
 import cx from "classnames";
 
+type gradientDirectionType = 'top-to-bottom' | 'left-to-right';
+
+type opacityType = '1/4' | '1/2' | '3/4' | 'full';
+
 interface GradientProps {
     /**
      * From colour
@@ -14,11 +18,11 @@ interface GradientProps {
     /**
      * Gradient direction
      */
-    gradientDirection?: 'top-to-bottom' | 'left-to-right';
+    gradientDirection?: gradientDirectionType;
     /**
      * Opacity
      */
-    opacity?: '1/4' | '1/2' | '3/4' | 'full';
+    opacity?: opacityType;
     /**
      * Z-index
      */
@@ -35,7 +39,7 @@ export const Gradient = ({
 
     const base = `h-full w-full absolute ${zIndex}`;
 
-    const getDirection = (gradientDirection) => {
+    const getDirection = (gradientDirection: gradientDirectionType) => {
         let customClass; 
         if(gradientDirection === 'top-to-bottom') {
             customClass = 'bg-gradient-to-b';
@@ -45,7 +49,7 @@ export const Gradient = ({
         return customClass;
     }
 
-    const getFromColour = (fromColour) => {
+    const getFromColour = (fromColour: colours) => {
         let customClass; 
         if(fromColour === 'darkGray') {
             customClass = 'from-darkGray';
@@ -67,7 +71,7 @@ export const Gradient = ({
         return customClass;
     }
 
-    const getToColour = (toColour) => {
+    const getToColour = (toColour: colours) => {
         let customClass; 
         if(toColour === 'darkGray') {
             customClass = 'to-darkGray';
@@ -110,10 +114,10 @@ export const Gradient = ({
         <span className={ 
             cx(
                 base,
-                getDirection(gradientDirection),
-                getFromColour(fromColour),
-                getToColour(toColour),
-                getOpacity(opacity),
+                getDirection(gradientDirection as gradientDirectionType),
+                getFromColour(fromColour as colours),
+                getToColour(toColour as colours),
+                getOpacity(opacity as opacityType),
             )
             }></span>
     )

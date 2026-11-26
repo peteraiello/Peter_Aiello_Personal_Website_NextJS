@@ -42,7 +42,7 @@ export const SelectFilter = ({
 
     const newOptions: selectFilterType[] = newfilterOptions;
 
-    const changeHandler = (event) => {
+    const changeHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
         event.preventDefault();
         setSelectedFilter(event?.currentTarget?.value);
     }
@@ -52,7 +52,7 @@ export const SelectFilter = ({
             <select 
                 aria-label={filterId + "-select"}
                 name={filterId} id={filterId} className="select-filter bg-transparent px-4 py-2 font-transducer text-brandRedLighter dark:text-brandBlueLighter border border-brandRedLighter dark:border-brandBlueLighter w-full outline-none focus:ring-2 focus:ring-brandRedLighter focus:ring-opacity-50 dark:focus:ring-brandBlueLighter"
-                onChange={(event) => changeHandler(event)} 
+                onChange={changeHandler} 
                 value={selectedFilter }
             >
                 {newOptions &&

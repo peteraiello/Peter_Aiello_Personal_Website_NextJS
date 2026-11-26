@@ -1,27 +1,37 @@
 import React from "react";
 import cx from "classnames";
 
+type variantType = "primary" | "lighter" | "darker";
+
+type weightType = 'bold' | 'medium' | 'normal' | 'semibold';
+
+type fontSizeType = "xl" | "lg" | "md" | "sm";
+
+type fontStyleType =  'serif' | 'san-serif';
+
+type fontHeadingType = '1' | '2' | '3' | '4' | '5' | '6';
+
 interface headingProps {
     /**
      * The heading level 
      */
-    hTag?: '1' | '2' | '3' | '4' | '5' | '6',
+    hTag?: fontHeadingType,
     /**
      * Font
      */
-    fontStyle?: 'serif' | 'san-serif',
+    fontStyle?: fontStyleType,
     /**
      * Font size (xl: 72px, lg:48px, md:24px, sm:20px)
      */
-    fontSize?: "xl" | "lg" | "md" | "sm",
+    fontSize?: fontSizeType,
     /**
      * Weight
      */
-    weight?: 'bold' | 'medium' | 'normal' | 'semibold',
+    weight?: weightType,
     /**
      * Variant
      */
-    variant?: "primary" | "lighter" | "darker",
+    variant?: variantType,
     /**
      * Classes (any additional classes you want to add)
      */
@@ -42,8 +52,8 @@ export const Heading = ({
     children
 }: headingProps) => {
 
-    const getFontColour = ({variant}) => {
-        let fontColour;
+    const getFontColour = ({variant}: {variant: variantType}) => {
+        let fontColour: string;
         switch (variant) {
             case 'primary': 
                 fontColour = 'text-brandRed dark:text-brandBlue';
@@ -60,8 +70,8 @@ export const Heading = ({
         return fontColour;
     }
 
-     const getFontWeight = ({weight}) => {
-        let textClass;
+     const getFontWeight = ({weight}: {weight: weightType}) => {
+        let textClass: string;
         switch (weight) {
             case 'bold': 
                 textClass = 'font-[600]';
@@ -81,8 +91,8 @@ export const Heading = ({
         return textClass;
     }
 
-    const getFontSize = ({fontSize}) => {
-        let fontClass; 
+    const getFontSize = ({fontSize}: {fontSize: fontSizeType}) => {
+        let fontClass: string; 
         switch (fontSize) {
             case "xl": 
                 /* font size 72px */
@@ -100,6 +110,8 @@ export const Heading = ({
                 /* font size 20px */
                 fontClass = "text-[16px] md:text-[18px] lg:text-[20px]"
             break;
+            default: 
+            fontClass = "text-[16px] md:text-[18px] lg:text-[20px]"
         }
         return fontClass;
     }
