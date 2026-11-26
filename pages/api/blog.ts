@@ -4,6 +4,20 @@ import matter from 'gray-matter'
 
 const postsDirectory = join(process.cwd(), '_posts')
 
+type postType = {
+  title: string,
+  excerpt: string,
+  external: boolean,
+  draft: boolean,
+  articleImage: {
+    src: string,
+    alt: string 
+  }, 
+  date: string,
+  buttonLink: string,
+  tags: []
+}
+
 const articleFields = [
     'title',
     'featured',
@@ -39,7 +53,6 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     if (field === 'content') {
       items[field] = content
     }
-
     if (typeof data[field] !== 'undefined') {
       items[field] = data[field]
     }
@@ -47,14 +60,14 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   return items
 }
 
-function convertToPersonalBlog(posts){
+function convertToPersonalBlog(posts: postType[]){
   const filteredPosts = posts.filter((post) => {
     return post.external !== true
   })
   return filteredPosts;
 }
 
-function convertToExternalPosts(posts){
+function convertToExternalPosts(posts: postType[]){
   const filteredPosts = posts.filter((post) => {
     return post.external !== false
   })
@@ -71,20 +84,20 @@ export function getAllArticles(fields: string[] = []) {
 
 export function getPersonalBlogPosts() {
   const posts = getAllArticles(articleFields)
-  const personalBlogPosts = convertToPersonalBlog(posts);
+  const personalBlogPosts = convertToPersonalBlog(posts as any);
   return personalBlogPosts;
 }
 
 export function getLatestPersonalBlogPosts() {
   const posts = getAllArticles(articleFields)
-  const personalBlogPosts = convertToPersonalBlog(posts);
+  const personalBlogPosts = convertToPersonalBlog(posts as any);
   const latestPosts = personalBlogPosts.slice(0,12); /* get the latest 12 articles */
   return latestPosts;
 }
 
 export function getLatestExternalBlogPosts() {
   const posts = getAllArticles(articleFields)
-  const externalPosts = convertToExternalPosts(posts);
+  const externalPosts = convertToExternalPosts(posts as any);
   const latestPosts = externalPosts.slice(0,3);
   return latestPosts;
 }

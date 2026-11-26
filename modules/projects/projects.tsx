@@ -113,10 +113,10 @@ export const Projects = ({
 
     useEffect(() => {
         setSelectedSkillsFilter(
-            filters?.skills && formatTag(filters?.skills[0])
+            filters?.skills ? formatTag(filters?.skills[0]) : ''
         );
         setSelectedIndustryFilter(
-            filters?.industries && formatTag(filters?.industries[0])
+            filters?.industries ? formatTag(filters?.industries[0]) : ''
         );
         projects && setFilteredProjects(projects);
     }, [])

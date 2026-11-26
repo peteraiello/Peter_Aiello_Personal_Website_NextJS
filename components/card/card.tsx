@@ -101,7 +101,7 @@ export const Card = ({
 
     const router = useRouter();
 
-    const clickHandler = (event) => {
+    const clickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
 
         /* don't let the page jump by calling prevent default function */
         event.preventDefault();
@@ -175,7 +175,7 @@ export const Card = ({
                                         <Button 
                                             href={"#"}
                                             label={"Learn More"}
-                                            onClick={(event) => clickHandler(event)}                                                                                        
+                                            onClick={clickHandler}                                                                                        
                                         />
                                     </div>
                                 }

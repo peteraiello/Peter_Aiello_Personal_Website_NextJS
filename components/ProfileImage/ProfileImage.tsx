@@ -5,7 +5,6 @@ import { CustomImage, customImageProps } from "../image/image";
 interface ProfileImageProps {
     mobileOnly?: boolean,
     image?: customImageProps
-  
 }
 
 export const ProfileImage = ({

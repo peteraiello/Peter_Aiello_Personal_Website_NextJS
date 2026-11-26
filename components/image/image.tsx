@@ -3,6 +3,12 @@ import Image from "next/image";
 import cx from 'classnames';
 
 export type imageSize = 'project' | 'square' | 'profile' | 'portrait' | 'gradient';
+
+type imageSizeType =  'project' | 'square' | 'profile' | 'portrait' | 'gradient';
+
+type fitType = 'cover' | 'contain';
+
+type roundedType = 'full' | 'md';
  
 export interface customImageProps {
     /**
@@ -20,7 +26,7 @@ export interface customImageProps {
     /**
      * Rounded
      */
-    rounded?: 'full' | 'md',
+    rounded?: roundedType,
     /**
      * Drop shadow
      */
@@ -32,11 +38,11 @@ export interface customImageProps {
     /**
      * Size
      */
-    size?: 'project' | 'square' | 'profile' | 'portrait' | 'gradient',
+    size?: imageSizeType,
     /**
      * Object fit
      */
-    fit?: 'cover' | 'contain'
+    fit?: fitType
 }
 
 export const CustomImage = ({
@@ -50,8 +56,8 @@ export const CustomImage = ({
     border
 }:customImageProps) => {
 
-    const getBorder = (border) => {
-        let customClass;
+    const getBorder = (border: boolean) => {
+        let customClass: string;
         if(border === true) {
             customClass = 'border-[1px] dark:border-brandBlueLighter border-brandRedLighter'
         } else {
@@ -60,8 +66,8 @@ export const CustomImage = ({
         return customClass;
     }
 
-    const getAspectRatio = (size) => {
-        let customClass;
+    const getAspectRatio = (size: imageSizeType) => {
+        let customClass: string;
         if(size === 'project') {
             customClass = 'aspect-[800/502]';
         } else if(size === 'square') {
@@ -76,8 +82,8 @@ export const CustomImage = ({
         return customClass;
     }
 
-    const getObjectFit = (fit) => {
-        let customClass; 
+    const getObjectFit = (fit: fitType) => {
+        let customClass: string; 
         if(fit === 'cover') {
             customClass = 'object-cover';
         } else if (fit === 'contain') {
@@ -88,18 +94,18 @@ export const CustomImage = ({
         return customClass;
     }
 
-    const getIsRounded = (rounded) => {
-        let customClass;
+    const getIsRounded = (rounded: roundedType) => {
+        let customClass: string;
         if(rounded === 'full') {
             customClass = 'rounded-full overflow-hidden';
-        } else if(rounded === 'md') {
-            customClass = 'rounded-lg overflow-hidden';
+        } else {
+            customClass = 'rounded-lg overflow-hidden';            
         }
         return customClass;
     }
 
-    const getImageSize = (size) => {
-        let customSize; 
+    const getImageSize = (size: imageSizeType) => {
+        let customSize: string; 
         if(size === 'project') {
             customSize = '(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw';
         } else if(size === 'profile') {
@@ -112,16 +118,12 @@ export const CustomImage = ({
         return customSize;
     }
 
-    const imageLoader = () => {
-       return console.log("image loader");
-    }
-
     return(
         <div className={
             cx(
                 `relative`,              
-                getIsRounded(rounded),
-                getAspectRatio(size),
+                getIsRounded(rounded as roundedType),
+                getAspectRatio(size as imageSizeType),
                 dropShadow && `drop-shadow-lg`,
             )        
         }>
@@ -133,13 +135,13 @@ export const CustomImage = ({
                         fill
                         className={
                             cx( 
-                                getBorder(border),
-                                getObjectFit(fit)
+                                getBorder(border as boolean),
+                                getObjectFit(fit as fitType)
 
                             )
                         }    
                         loading={"lazy"}
-                        sizes={getImageSize(size)}
+                        sizes={getImageSize(size as imageSizeType)}
                     />
                     {caption &&
                         <figcaption className="absolute bottom-[-30px]">
@@ -154,11 +156,11 @@ export const CustomImage = ({
                     fill
                     className={
                         cx(
-                            getObjectFit(fit),
-                            getBorder(border)
+                            getObjectFit(fit as fitType),
+                            getBorder(border as boolean)
                         )
                     }
-                    sizes={getImageSize(size)}
+                    sizes={getImageSize(size as imageSizeType)}
                 />            
             }        
         </div>
